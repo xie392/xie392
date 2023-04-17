@@ -1,0 +1,418 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>xie392</title><meta name="author" content="xie392"><meta name="copyright" content="xie392"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="xie392"><link rel="shortcut icon" href="/images/logo.png"><link rel="canonical" href="https://xie392.gitee.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'xie392',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-04-17 20:32:23'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/images/loading.gif" data-lazy-src="/images/logo.png" onerror="onerror=null;src='/images/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></li><li><a class="site-page child" href="/share/"><i class="fa-fw fas fa-share-alt"></i><span> 分享</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/images/home-b.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="xie392"><span class="site-name">xie392</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></li><li><a class="site-page child" href="/share/"><i class="fa-fw fas fa-share-alt"></i><span> 分享</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">xie392</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xie392" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/hello-world/" title="Hello World"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_03.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-17T12:27:19.000Z" title="发表于 2023-04-17 20:27:19">2023-04-17</time></span></div><div class="content">名称 用法
+class 【可选】标识，不同的标识有不同的配色
+（ default / primary / success / info / warning / danger ）
+no-icon 【可选】不显示 icon
+style 【可选】可以覆盖配置中的 style
+（simple/modern/flat/disabled）
+Any content (support inline tags too.io).
+
+你是刷 Visa 还是 UnionPay
+
+2021 年快到了…
+
+小心开车 安全至上
+
+这是三片呢？还是四片？
+
+你是刷 Visa 还是 UnionPay
+
+剪刀石头布
+
+前端最讨厌的浏览器
+
+
+
+  
+  
+  
+  壁纸
+  收藏的一些壁纸
+  
+  
+  
+  
+
+  
+  
+  
+  漫威
+  关于漫威的图片
+  
+  
+  
+  
+
+  
+  
+  
+  OH MY GIRL
+  关于OH MY GIRL的图片
+  
+  
+  
+  
+
+display
+    content
+
+查看答案
+查看答案
+    傻子，怎么可能有答案
+
+content: 文本内容
+disp ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Web/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E4%B8%BA%E4%BA%86%E5%A5%B3%E7%A5%9E%E5%B0%8F%E8%8A%B3%EF%BC%81SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86-%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83/" title="封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练"></a></div><div class="recent-post-info"><a class="article-title" href="/Web/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E4%B8%BA%E4%BA%86%E5%A5%B3%E7%A5%9E%E5%B0%8F%E8%8A%B3%EF%BC%81SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86-%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83/" title="封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练">封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-17T03:35:00.000Z" title="发表于 2023-04-17 11:35:00">2023-04-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Web%E5%AE%89%E5%85%A8/">Web安全</a></span></div><div class="content">封神台是一个在线演练靶场，本人现在也是新手，不知道是不是因为有些教程有点久远还是我操作不当，始终拿不到 flag ，所有我打算把我的解题方法写出来，加深记忆。
+因为第一章的教程是没有问题的，纯手打就可以拿到 flag , 可以直接参考即可，为此我的教程是使用工具获取 flag ，本文要使用工具为 sqlmap ,什么是sqlmap? 简单来说就是一个 sql注入工具，如果要详细了解，可以看这篇文章: https://www.freebuf.com/sectool/164608.html ,这里就不多介绍了，我用 kail 自带的 sqlmap：
+sqlmap下载地址：https://sqlmap.org/
+主要命令：
+1sqlmap -u &quot;目标地址&quot; -D 库名 -T 表名  -C 字段名 -dump 
+1、打开sqlmap：
+1sqlmap
+2、扫描目标地址，判断有无注入点:
+1sqlmap -u  http://rhiq8003.ia.aqlab.cn/?id=1
+3、查看当前库名：
+1sqlmap -u http://rhiq8003.ia.aqlab.cn ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/JavaScript/%E7%BD%91%E9%A1%B5%E6%92%AD%E6%94%BErtsp%E8%A7%86%E9%A2%91%E6%B5%81/" title="网页播放rtsp视频流"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="网页播放rtsp视频流"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript/%E7%BD%91%E9%A1%B5%E6%92%AD%E6%94%BErtsp%E8%A7%86%E9%A2%91%E6%B5%81/" title="网页播放rtsp视频流">网页播放rtsp视频流</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-17T01:36:44.000Z" title="发表于 2023-04-17 09:36:44">2023-04-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="content">前言
+目前我所用过的四种方法可以实现网页播放 rtsp 视频流，在各大浏览器做了测试，基本都能显示。以下这些都可以在各大主流浏览器上播放，但我并没有深入了解，全是一些 demo，所以此文仅供参考
+
+方法
+目前这四种方法几乎都是流码实现网页播放功能,话不多说，如下：
+
+RTSPtoWebRTC
+VLC
+ffmpeg+jsmpeg+node
+rtsp 转 m3u8
+
+一、RTSPtoWebRTC
+安装 go 环境（下载地址）。建议默认安装，如果没默认可能要配置环境变量。下载安装后查看是否全局使用：
+1go version
+有相关信息就证明安装成功。一般 go 需要换源，国内速度太慢，或者说根本访问不了，建议换源（下面命令）
+1、开启 Go 的 MODULE 支持：
+1export GO111MODULE=on
+2、软件源替换：
+1export GOPROXY=https://goproxy.cn,direct
+装好 Go 所需的环境变量后，下载 RTSPtoWebRTC ，下载完成后，修改 confing.json 中的 url 就行
+
+运行命令：
+1GO111MODULE=on go r ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Python/Python%E7%88%AC%E8%99%AB/" title="Python爬虫"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Python爬虫"></a></div><div class="recent-post-info"><a class="article-title" href="/Python/Python%E7%88%AC%E8%99%AB/" title="Python爬虫">Python爬虫</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-16T03:36:44.000Z" title="发表于 2023-04-16 11:36:44">2023-04-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="content">前言
+本文使用软件为 pycharm ,没有的可以去安装以下。如果找不到专业版（Professional）的破解版就安装下载社区版(Community) ，点击这里 下载。如果没有 python 环境也请装一下，点击 下载,配置环境变量这里就不说了，如果是默认安装地址的话，一般不用配置。下面是一些 demo，主要方便自己回来查看，并非教学，有兴趣可以看看 教学视频，非常推荐！！！
+1、豆瓣电影
+1234567891011121314151617181920212223242526272829303132# 导入模块import requestsimport json# 目标网址url = &#x27;https://movie.douban.com/j/chart/top_list&#x27;# 参数param = &#123;     &quot;type&quot;:&quot;24&quot;,     &quot;interval_id&quot;: &quot;100:90&quot;,     &quot;action&quot;:&quot;&quot;,     &qu ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Vue/vue3%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" title="vue3自定义指令"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="vue3自定义指令"></a></div><div class="recent-post-info"><a class="article-title" href="/Vue/vue3%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" title="vue3自定义指令">vue3自定义指令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-16T03:36:44.000Z" title="发表于 2023-04-16 11:36:44">2023-04-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/vue/">vue</a></span></div><div class="content">我们使用 vue 时，有时候需要用到自定义指令，例如一个防抖指令
+
+前言
+现在有一个需求，用户在点击某个按钮时，我不希望用户在疯狂点击后，每次点击都会触发事件，像服务器发送请求，这并不是我们预期的，所以我们需要在用户点击是做防抖处理。那么怎么做到方便复用的解决方法？还真有，那就是自己定义指令
+一、在 main 中使用自定义指令
+1234import useDebounce from &#x27;@/hooks/useDebounce&#x27;const app = createApp(App)app.directive(&#x27;debounce&#x27;, useDebounce)
+下面是 useDebounce  代码
+1234567891011121314151617181920212223242526272829303132333435363738394041/** * 防抖指令 * @param el 指令绑定的元素 * @param binding 指令绑定的值 * @param binding.value.callback 回调函数 * @param binding ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/JavaScript/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A4%8D%E5%88%B6%E5%85%BC%E5%AE%B9%E5%86%99%E6%B3%95/" title="js复制兼容写法封装"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="js复制兼容写法封装"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A4%8D%E5%88%B6%E5%85%BC%E5%AE%B9%E5%86%99%E6%B3%95/" title="js复制兼容写法封装">js复制兼容写法封装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-14T01:36:44.000Z" title="发表于 2023-04-14 09:36:44">2023-04-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="content">Clipboard 接口实现了 Clipboard API，如果用户授予了相应的权限，其就能提供系统剪贴板的读写访问能力。在 Web 应用程序中，Clipboard API 可用于实现剪切、复制和粘贴功能。
+
+123456789101112131415161718192021222324const Clipboard = (text) =&gt; &#123;  if (navigator.clipboard) &#123;    try &#123;      // 复制成功      navigator.clipboard.writeText(text)    &#125; catch &#123;      // 复制失败    &#125;  &#125; else &#123;    const textArea = document.createElement(&#x27;textarea&#x27;)    textArea.value = text    document.body.appendChild(textArea)    textArea.focus()    ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Other/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="git在工作中的使用"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_08.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="git在工作中的使用"></a></div><div class="recent-post-info"><a class="article-title" href="/Other/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="git在工作中的使用">git在工作中的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-14T01:36:44.000Z" title="发表于 2023-04-14 09:36:44">2023-04-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E5%AE%83/">其它</a></span></div><div class="content">这里简单介绍一下 git 的常用命令
+
+1、克隆代码
+我们知道，第一次本地没有项目，所以需要先下载项目到本地。要下载别人的远程代码到本地，可以使用
+1git clone https://...   # https://...为远程仓库地址
+基本使用一次之后，就不用每天克隆远程代码到本地了
+2、更新本地代码
+
+更新方法一
+后面不需要每天克隆代码，只需要获取最新的远程代码即可
+1git pull
+更新方法二
+在本地新建一个 new-master 分支，并将远程 origin 仓库的 master 分支代码下载到本地 new-master 分支
+1git fetch origin master:new-master
+合并 new-master 分支
+1git merge new-master
+最后可以删除分支
+1git branch -d new-master # -D 可以强制删除分支
+3、推送代码到远程仓库
+第一天克隆代码本地后，修后需要上传到远程仓库，依次使用命令
+1、上传到本地仓库
+1git add .
+2、提交备注
+1git commit -m &quot;name&quot;   ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Vue/vue%E8%B7%AF%E7%94%B1%E7%99%BD%E5%90%8D%E5%8D%95/" title="vue路由白名单"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="vue路由白名单"></a></div><div class="recent-post-info"><a class="article-title" href="/Vue/vue%E8%B7%AF%E7%94%B1%E7%99%BD%E5%90%8D%E5%8D%95/" title="vue路由白名单">vue路由白名单</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-17T03:36:44.000Z" title="发表于 2023-03-17 11:36:44">2023-03-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/vue/">vue</a></span></div><div class="content">项目场景：
+例如：网页中有些页面需要登录后才能访问，有些页面不需要，我们需要在页面的前置路由设置白名单，过滤出白名单（不需要登录就可以访问的页面），判断是否需要登录，如果是，就跳到登录页面。
+
+解决方案
+在 src 下建立一个名为 permission 的 js 文件，在 main 中引入, 这个判断是否登录的思路是判断有没有 cookie，至于 cookie 存在在哪，看自己的实际情况， permission 代码如下：
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546import router from &#x27;./router&#x27;// 获取 cookie 的，如果你的cookie 存放在 localStorage ，就用相应的方法判断一下就好import &#123; getCookie &#125; from &#x27;@/utils/auth&#x27;// 这个是一个顶部进度条插件，安装命令: npm install nprogress -Si ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/JavaScript/Echarts%E7%94%A8%E6%B3%95/" title="Echarts使用心得"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Echarts使用心得"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript/Echarts%E7%94%A8%E6%B3%95/" title="Echarts使用心得">Echarts使用心得</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-14T01:36:44.000Z" title="发表于 2023-02-14 09:36:44">2023-02-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="content">前言
+Echarts 是一个 JavaScript 的开源可视化图表库，可以快速画出许多图形，我们有时候会用到它，但是官方教程对于新手来说确实不友好，至少在我看来是这样的，看了我几天才大概有所了解，为了加深记忆，故在此记下，方便日后忘记可以回来查看
+
+一、基础画图
+基础画一个图，首先要知道的是重点在于配置项setOption,现在先不急了解，我们先简单画一个图
+
+1、在页面创建一个 div 标签，id 值为 myChart
+1&lt;div id=&quot;myChart&quot; style=&quot;&quot;width:300px;height:300px;&quot;&gt;&lt;/div&gt;
+
+2、引入 echarts.js 并绘画，echats.js 的 Github 下载地址
+1234567891011121314151617181920// 初始化echarts实例var myChart = echarts.init(document.getElementById(&#x27;myChart&#x27;))// 指定图表的配置项和数据var option  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/JavaScript/js%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%9B%AE%E5%BD%95%E8%8A%82%E7%82%B9%E8%B7%9F%E9%9A%8F%E6%BB%9A%E5%8A%A8%E9%AB%98%E4%BA%AE/" title="js生成目录并实现目录节点跟随滚动高亮"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="js生成目录并实现目录节点跟随滚动高亮"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript/js%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%9B%AE%E5%BD%95%E8%8A%82%E7%82%B9%E8%B7%9F%E9%9A%8F%E6%BB%9A%E5%8A%A8%E9%AB%98%E4%BA%AE/" title="js生成目录并实现目录节点跟随滚动高亮">js生成目录并实现目录节点跟随滚动高亮</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-01-16T03:36:44.000Z" title="发表于 2023-01-16 11:36:44">2023-01-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="content">项目场景：
+当网页有文章，文章中有很多标题。我们有时会需要生成目录大纲，以便他人查阅。生成目录到是不难，但是怎么实现目录跟随着页面滚动而改变目录的高亮标题？
+
+获取所有标题，并生成大纲
+123456789101112131415161718// 获取所有标题let tocList = document.querySelectorAll(&#x27;h1, h2, h3, h4, h5, h6&#x27;)let HList = [&#x27;H1&#x27;, &#x27;H2&#x27;, &#x27;H3&#x27;, &#x27;H4&#x27;, &#x27;H5&#x27;, &#x27;H6&#x27;]let str = `&lt;div class=&quot;dir&quot;&gt;&lt;ul id=&quot;toc&quot;&gt;`// 生成目录（你也可以更具自己需要生成一个对象也可以，我这里生成 html字符串）Array.from(tocList, (v) =&gt; &#123;  const H = HList.indexOf(v.nodeName ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/Vue/%E7%BD%91%E9%A1%B5%E5%86%85%E5%B5%8CBilibili%E8%A7%86%E9%A2%91/" title="网页内嵌B站视频，隐藏相关控件"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_07.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="网页内嵌B站视频，隐藏相关控件"></a></div><div class="recent-post-info"><a class="article-title" href="/Vue/%E7%BD%91%E9%A1%B5%E5%86%85%E5%B5%8CBilibili%E8%A7%86%E9%A2%91/" title="网页内嵌B站视频，隐藏相关控件">网页内嵌B站视频，隐藏相关控件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-01-14T01:36:00.000Z" title="发表于 2023-01-14 09:36:00">2023-01-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/vue/">vue</a></span></div><div class="content">网页内嵌 B 站视频主要是用 ifame , 其地址是：
+1https://player.bilibili.com/player.html?cid=&amp;aid=84267566&amp;page=1&amp;as_wide=1&amp;high_quality=1&amp;danmaku=0
+后面的参数说明：
+
+
+
+key
+属性
+
+
+
+
+cid
+应该是客户端iid，可以不填
+
+
+aid
+视频id，必填
+
+
+page
+B站视频, 选集里的, 第几个视频 ————默认值为）
+
+
+as_wide
+是否宽屏 1: 宽屏, 0: 小屏
+
+
+high_quality
+是否高清
+
+
+danmaku
+是否开启弹幕 1: 开启(默认), 0: 关闭
+
+
+
+
+其中 aid 为必填，其它参数可以不填
+
+这个 aid 怎么获取呢？这就需要请求 B 站这个接口了
+1https://api.bilibili.com/x/web-interface/view?bvid=BV1gY4y1E7h8
+1、aid获取
+bvid怎么获取？在 B站播放视频中的 url 里我们可以看到
+
+如果网页上传 链接提取的话就需要先 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Sql/sql%E7%AC%94%E8%AE%B0/" title="SQL笔记"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="SQL笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/Sql/sql%E7%AC%94%E8%AE%B0/" title="SQL笔记">SQL笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-12-16T03:36:44.000Z" title="发表于 2022-12-16 11:36:44">2022-12-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/SQL/">SQL</a></span></div><div class="content">学习目标：
+SQL:的基本语法，遗忘可以回来查看
+
+一、创建数据库
+
+CREATE DATABASE &lt;数据库名&gt;
+[ AUTHORIZATION &lt;用户名&gt; ]
+[ ON[ PRIMARY] (路径//文件大小) ]
+[ LOG ON (路径/文件大小) ]
+
+123456789101112create database name on (   	-- name 数据库名称	name = &#x27;name&#x27;，				-- &#x27;name&#x27; 数据库名称	filename = &#x27;F:\test.mdf&#x27;, 	-- 路径地址	size = 10,					-- 设置大小（非必须）	maxsize= 50,				-- 最大值（非必须）	filegrowth = 5%,			-- 数据文件的增长速度 （非必须）)-- 创建日志文件（连上面）log on (	name = name_log,			-- 日志名称	filename = &#x27;F:\test.ldf&#x27;    -- 日志文件路径)
+二、 修改数 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/JavaScript/indexDB%E5%B0%81%E8%A3%85/" title="indexDB操作封装"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_10.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="indexDB操作封装"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript/indexDB%E5%B0%81%E8%A3%85/" title="indexDB操作封装">indexDB操作封装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-10-16T01:36:44.000Z" title="发表于 2022-10-16 09:36:44">2022-10-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="content">123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178export default class DB &#123;  option: &#123;&#125;  db = null  construct ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/JavaScript/js-cookie%E5%B0%81%E8%A3%85/" title="js-cookie封装"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="js-cookie封装"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript/js-cookie%E5%B0%81%E8%A3%85/" title="js-cookie封装">js-cookie封装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-16T03:36:44.000Z" title="发表于 2022-09-16 11:36:44">2022-09-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="content">123456789101112131415161718192021222324252627282930313233343536373839404142import Cookies from &#x27;js-cookie&#x27;// 获取tokenexport function getCookie(key: string) &#123;  return Cookies.get(key)&#125;// 设置tokenexport function setCookie(key: string, value: string, expire: number = 7) &#123;  return Cookies.set(key, value)&#125;// 删除tokenexport function removeCookie(key: string) &#123;  return Cookies.remove(key)&#125;// 设置过期时间export function setCookieExpire(key: string, token: string, expire: n ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/JavaScript/JavaScript%E5%88%A4%E6%96%AD%E6%89%8B%E6%9C%BA%E6%88%96%E7%94%B5%E8%84%91%E7%AB%AF/" title="JavaScript判断手机或电脑端"><img class="post-bg" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="JavaScript判断手机或电脑端"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript/JavaScript%E5%88%A4%E6%96%AD%E6%89%8B%E6%9C%BA%E6%88%96%E7%94%B5%E8%84%91%E7%AB%AF/" title="JavaScript判断手机或电脑端">JavaScript判断手机或电脑端</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-16T02:36:44.000Z" title="发表于 2022-06-16 10:36:44">2022-06-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="content">判断手机端和电脑端可以根据 屏幕大小 来判断，也可以使用 navigator 属性判断
+1、判断代码：
+123456789101112131415161718192021222324function isMobile() &#123;   var userAgentInfo = navigator.userAgent;   var mobileAgents = [&quot;Android&quot;, &quot;iPhone&quot;, &quot;SymbianOS&quot;, &quot;Windows Phone&quot;, &quot;iPad&quot;, &quot;iPod&quot;];   var mobile_flag = false;    	//根据userAgent判断是否是手机    for (var v = 0; v &lt; mobileAgents.length; v++) &#123;       if (userAgentInfo.indexOf(mobileAgents[v]) &gt; 0) &#123;             mo ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/images/loading.gif" data-lazy-src="/images/logo.png" onerror="this.onerror=null;this.src='/images/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xie392</div><div class="author-info__description">xie392</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/xie392"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xie392" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">一个个人笔记博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/hello-world/" title="Hello World"><img src= "/images/loading.gif" data-lazy-src="/images/cover_03.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/hello-world/" title="Hello World">Hello World</a><time datetime="2023-04-17T12:27:19.000Z" title="发表于 2023-04-17 20:27:19">2023-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Web/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E4%B8%BA%E4%BA%86%E5%A5%B3%E7%A5%9E%E5%B0%8F%E8%8A%B3%EF%BC%81SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86-%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83/" title="封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练"><img src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练"/></a><div class="content"><a class="title" href="/Web/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E4%B8%BA%E4%BA%86%E5%A5%B3%E7%A5%9E%E5%B0%8F%E8%8A%B3%EF%BC%81SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86-%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83/" title="封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练">封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练</a><time datetime="2023-04-17T03:35:00.000Z" title="发表于 2023-04-17 11:35:00">2023-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/JavaScript/%E7%BD%91%E9%A1%B5%E6%92%AD%E6%94%BErtsp%E8%A7%86%E9%A2%91%E6%B5%81/" title="网页播放rtsp视频流"><img src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="网页播放rtsp视频流"/></a><div class="content"><a class="title" href="/JavaScript/%E7%BD%91%E9%A1%B5%E6%92%AD%E6%94%BErtsp%E8%A7%86%E9%A2%91%E6%B5%81/" title="网页播放rtsp视频流">网页播放rtsp视频流</a><time datetime="2023-04-17T01:36:44.000Z" title="发表于 2023-04-17 09:36:44">2023-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Python/Python%E7%88%AC%E8%99%AB/" title="Python爬虫"><img src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Python爬虫"/></a><div class="content"><a class="title" href="/Python/Python%E7%88%AC%E8%99%AB/" title="Python爬虫">Python爬虫</a><time datetime="2023-04-16T03:36:44.000Z" title="发表于 2023-04-16 11:36:44">2023-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Vue/vue3%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" title="vue3自定义指令"><img src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="vue3自定义指令"/></a><div class="content"><a class="title" href="/Vue/vue3%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" title="vue3自定义指令">vue3自定义指令</a><time datetime="2023-04-16T03:36:44.000Z" title="发表于 2023-04-16 11:36:44">2023-04-16</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/JavaScript/"><span class="card-category-list-name">JavaScript</span><span class="card-category-list-count">12</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/SQL/"><span class="card-category-list-name">SQL</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Web%E5%AE%89%E5%85%A8/"><span class="card-category-list-name">Web安全</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/vue/"><span class="card-category-list-name">vue</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E5%AE%83/"><span class="card-category-list-name">其它</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%88%86%E4%BA%AB/"><span class="card-category-list-name">分享</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">微信小程序</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/JavaScript/" style="font-size: 1.5em; color: #99a9bf">JavaScript</a> <a href="/tags/Linux/" style="font-size: 1.1em; color: #999">Linux</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.1em; color: #999">微信小程序</a> <a href="/tags/GitHub/" style="font-size: 1.1em; color: #999">GitHub</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/SQL/" style="font-size: 1.1em; color: #999">SQL</a> <a href="/tags/vue/" style="font-size: 1.3em; color: #99a1ac">vue</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">23</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-10-02T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">22.4k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-04-17T12:32:23.654Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/images/cover_03.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By xie392</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">学习永无止境，不要被一点点小小的问题所止步于此</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["年少曾许凌云志 当许世间第一流","天行健 君子以自强不息 | 地势乾 君子以厚德载物","莫等闲 白了少年头 空悲切","不畏浮云遮望眼 只缘身在最高层","穷则独善其身 达则兼善天下","长风破浪会有时 直挂云帆济沧海","男儿不展风云志 空负天生八尺躯","路漫漫其修远今 吾将上下而求索","醉后不知天在水 满船清梦压星河","劝君莫惜金缕衣 劝君惜取少年时","天生我材必有用 千金散尽还复来"])
+  } else {
+    document.getElementById("subtitle").innerHTML = '年少曾许凌云志 当许世间第一流'
+  }
+}
+typedJSFn.run(subtitleType)</script><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

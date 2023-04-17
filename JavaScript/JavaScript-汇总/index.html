@@ -1,0 +1,1413 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>JavaScript笔记大全 | xie392</title><meta name="author" content="xie392"><meta name="copyright" content="xie392"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="JavaScript"><link rel="shortcut icon" href="/images/logo.png"><link rel="canonical" href="https://xie392.gitee.io/JavaScript/JavaScript-%E6%B1%87%E6%80%BB/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JavaScript笔记大全',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-04-17 20:13:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/images/loading.gif" data-lazy-src="/images/logo.png" onerror="onerror=null;src='/images/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></li><li><a class="site-page child" href="/share/"><i class="fa-fw fas fa-share-alt"></i><span> 分享</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/cover_08.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="xie392"><span class="site-name">xie392</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></li><li><a class="site-page child" href="/share/"><i class="fa-fw fas fa-share-alt"></i><span> 分享</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JavaScript笔记大全</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-14T01:36:44.000Z" title="发表于 2022-02-14 09:36:44">2022-02-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-17T12:13:44.740Z" title="更新于 2023-04-17 20:13:44">2023-04-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>23分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JavaScript笔记大全"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>本文JavaScript笔记用于平常查阅使用</p>
+<h1>一、Date（日期） 对象</h1>
+<p>日期对象用于处理日期和时间。</p>
+<h2 id="1-get方法">1. get方法</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">getFullYear()</td>
+<td style="text-align:left">获取年份</td>
+</tr>
+<tr>
+<td style="text-align:left">getMonth()</td>
+<td style="text-align:left">获取月份</td>
+</tr>
+<tr>
+<td style="text-align:left">getDate()</td>
+<td style="text-align:left">获取日期</td>
+</tr>
+<tr>
+<td style="text-align:left">getDay()</td>
+<td style="text-align:left">获取星期几</td>
+</tr>
+<tr>
+<td style="text-align:left">getHours()</td>
+<td style="text-align:left">获取小时</td>
+</tr>
+<tr>
+<td style="text-align:left">getMinutes()</td>
+<td style="text-align:left">获取分钟</td>
+</tr>
+<tr>
+<td style="text-align:left">getSeconds()</td>
+<td style="text-align:left">获取秒钟</td>
+</tr>
+<tr>
+<td style="text-align:left">getMilliseconds()</td>
+<td style="text-align:left">获取毫秒</td>
+</tr>
+<tr>
+<td style="text-align:left">getTime()</td>
+<td style="text-align:left">获取1970年至今的毫秒数  同 Date.now()</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-to方法">2. to方法</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">toString()</td>
+<td style="text-align:left">把日期对象转字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">toLocaleString()</td>
+<td style="text-align:left">把日期对象转成符合当地习惯的字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">toDateString()</td>
+<td style="text-align:left">把时间对象的日期部分转字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">toLocaleDateString()</td>
+<td style="text-align:left">把时间对象的日期部分转成符合当地习惯的字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">toTimeString()</td>
+<td style="text-align:left">把时间对象的时间部分转字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">toLocaleTimeString()</td>
+<td style="text-align:left">把时间对象的时间部分转成符合当地习惯的字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">toUTCString()</td>
+<td style="text-align:left">把日期对象转UTC时间字符串</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-set方法">3.set方法</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">setFullYear()</td>
+<td style="text-align:left">设置年份</td>
+</tr>
+<tr>
+<td style="text-align:left">setMonth()</td>
+<td style="text-align:left">设置月份</td>
+</tr>
+<tr>
+<td style="text-align:left">setDate()</td>
+<td style="text-align:left">设置日期</td>
+</tr>
+<tr>
+<td style="text-align:left">setHours()</td>
+<td style="text-align:left">设置小时</td>
+</tr>
+<tr>
+<td style="text-align:left">setMinutes()</td>
+<td style="text-align:left">设置分数</td>
+</tr>
+<tr>
+<td style="text-align:left">setSeconds()</td>
+<td style="text-align:left">设置秒数</td>
+</tr>
+<tr>
+<td style="text-align:left">setMilliseconds()</td>
+<td style="text-align:left">设置毫秒</td>
+</tr>
+</tbody>
+</table>
+<p>创建时间对象:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>(); </span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>(dateString); </span><br></pre></td></tr></table></figure>
+<p>代码如下（以“2022-1-14 09:58:27 星期五” 为例）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实例时间对象</span></span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// get</span></span><br><span class="line"><span class="keyword">var</span> year = date.<span class="title function_">getFullYear</span>();  <span class="comment">// 2022</span></span><br><span class="line"><span class="keyword">var</span> month = date.<span class="title function_">getMonth</span>()+<span class="number">1</span>;  <span class="comment">// 默认月份从 0 开始，所以要 +1 ，结果为: 1</span></span><br><span class="line"><span class="keyword">var</span> newDate = date.<span class="title function_">getDate</span>();  <span class="comment">// 14</span></span><br><span class="line"><span class="keyword">var</span> day = date.<span class="title function_">getDay</span>();  <span class="comment">// 5</span></span><br><span class="line"><span class="keyword">var</span> hours = date.<span class="title function_">getHours</span>();  <span class="comment">// 9</span></span><br><span class="line"><span class="keyword">var</span> minutes = date.<span class="title function_">getMinutes</span>(); <span class="comment">// 58</span></span><br><span class="line"><span class="keyword">var</span> seconds = date.<span class="title function_">getSeconds</span>(); <span class="comment">// 27</span></span><br><span class="line"><span class="keyword">var</span> milliseconds = date.<span class="title function_">getMilliseconds</span>(); <span class="comment">// 735</span></span><br><span class="line"><span class="keyword">var</span> time = date.<span class="title function_">getTime</span>(); <span class="comment">// 1642125892270</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// to</span></span><br><span class="line"><span class="keyword">var</span> toString = date.<span class="title function_">toString</span>();  <span class="comment">// typeof strTime = &quot;String&quot;</span></span><br><span class="line"><span class="keyword">var</span> toLocaleString = date.<span class="title function_">toLocaleString</span>();  <span class="comment">// 2022/1/14 上午9:58:27</span></span><br><span class="line"><span class="keyword">var</span> toDateString = date.<span class="title function_">toDateString</span>();  <span class="comment">// Fri Jan 14 2022</span></span><br><span class="line"><span class="keyword">var</span> toLocaleDateString = date.<span class="title function_">toLocaleDateString</span>(); <span class="comment">// 2022/1/14</span></span><br><span class="line"><span class="keyword">var</span> toTimeString = date.<span class="title function_">toTimeString</span>();  <span class="comment">// 09:58:27 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="keyword">var</span> toLocaleTimeString = date.<span class="title function_">toLocaleTimeString</span>(); <span class="comment">// 上午9:58:27</span></span><br><span class="line"><span class="keyword">var</span> toUTCString = date.<span class="title function_">toUTCString</span>(); <span class="comment">// Fri, 14 Jan 2022 02:45:38 GMT</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// set</span></span><br><span class="line">date.<span class="title function_">setFullYear</span>(<span class="number">2024</span>);</span><br><span class="line">date.<span class="title function_">setMonth</span>(<span class="number">1</span>);</span><br><span class="line">date.<span class="title function_">setDate</span>(<span class="number">19</span>);</span><br><span class="line">date.<span class="title function_">setHours</span>(<span class="number">08</span>);</span><br><span class="line">date.<span class="title function_">setMinutes</span>(<span class="number">00</span>);</span><br><span class="line">date.<span class="title function_">setSeconds</span>(<span class="number">00</span>);</span><br><span class="line">date.<span class="title function_">setMilliseconds</span>(<span class="number">00</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date);  <span class="comment">// Mon Feb 19 2024 08:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+<br>
+<h1>二、Math / 随机生成</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ceil()</td>
+<td style="text-align:left">对数进行上舍入，即向上取整</td>
+</tr>
+<tr>
+<td style="text-align:left">round()</td>
+<td style="text-align:left">四舍五入</td>
+</tr>
+<tr>
+<td style="text-align:left">foor()</td>
+<td style="text-align:left">对 x 进行下舍入，即向下取整</td>
+</tr>
+<tr>
+<td style="text-align:left">random()</td>
+<td style="text-align:left">返回 0 ~ 1 之间的随机数，包含 0 不包含 1</td>
+</tr>
+</tbody>
+</table>
+<p>代码如下（获取从 1 到 10 的随机整数，取 0 的概率极小）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Math</span>.<span class="title function_">ceil</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">10</span>) </span><br></pre></td></tr></table></figure>
+<p>代码如下（可均衡获取 0 到 1 的随机整数）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>())</span><br></pre></td></tr></table></figure>
+<p>代码如下（可均衡获取 0 到 9 的随机整数）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<p>代码如下（基本均衡获取 0 到 10 的随机整数，其中获取最小值 0 和最大值 10 的几率少一半）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Math</span>.<span class="title function_">round</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">10</span>) </span><br></pre></td></tr></table></figure>
+<br>
+<h1>三、数组API</h1>
+<p>数组对象的作用是：使用单独的变量名来存储一系列的值。</p>
+<h2 id="1-数组API">1.数组API</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">push()</td>
+<td style="text-align:left">往数组的尾部插入一个或多个元素</td>
+</tr>
+<tr>
+<td style="text-align:left">pop()</td>
+<td style="text-align:left">从数组的尾部删除一个元素</td>
+</tr>
+<tr>
+<td style="text-align:left">unshift()</td>
+<td style="text-align:left">往数组的头部插入一个或多个元素</td>
+</tr>
+<tr>
+<td style="text-align:left">shift()</td>
+<td style="text-align:left">从数组的头部删除一个元素</td>
+</tr>
+<tr>
+<td style="text-align:left">slice()</td>
+<td style="text-align:left">裁切数组</td>
+</tr>
+<tr>
+<td style="text-align:left">splice()</td>
+<td style="text-align:left">删除或替换数组某个元素</td>
+</tr>
+<tr>
+<td style="text-align:left">concat()</td>
+<td style="text-align:left">连接一个或多个数组, 不会修改原数组, 会返回连接出来的新数组</td>
+</tr>
+<tr>
+<td style="text-align:left">join()</td>
+<td style="text-align:left">以特定的连接符将一个数组连接成字符串, 不会修改原数组</td>
+</tr>
+<tr>
+<td style="text-align:left">reverse()</td>
+<td style="text-align:left">反转数组</td>
+</tr>
+</tbody>
+</table>
+<p>代码如下（例子）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">push</span>(<span class="number">4</span>);    <span class="comment">// 修改原数组,返回新数组长度 4,arr = [1, 2, 3, 4]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">pop</span>();      <span class="comment">// 修改原数组,返回被删除的元素 4,arr = [1, 2, 3]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">unshift</span>(<span class="number">0</span>); <span class="comment">// 修改原数组,返回新数组长度 4,arr = [0, 1, 2, 3]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">shift</span>();    <span class="comment">// 修改原数组,返回被删除的元素 0,arr = [1, 2, 3]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">slice</span>(<span class="number">0</span>,<span class="number">2</span>); <span class="comment">// 不会修改原数组,返回被裁切出来的数组 [1, 2],arr = [1, 2, 3]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">slice</span>(<span class="number">1</span>);   <span class="comment">// 如果只有一个参数, 则作为开始下标 裁切到数组尾部</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">splice</span>(<span class="number">1</span>,<span class="number">2</span>);<span class="comment">// 会修改原数组,返回切割出来的数组 [2, 3],arr = [1]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">splice</span>(<span class="number">1</span>);  <span class="comment">// 如果只有一个参数, 则作为开始裁切的下标, 裁切到数组尾部</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">splice</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span>); <span class="comment">// 替换,newArr=[1, 2],arr=[1, 0, 0] </span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">concat</span>([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]); <span class="comment">// 不会修改原数组,会返回连接出来的新数组 [1,2,3,4,5,6]</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">join</span>(<span class="string">&quot;-&quot;</span>);  <span class="comment">// 不会修改原数组, 返回连接过后的新字符串 1-2-3-4-5-6</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">reverse</span>();  <span class="comment">// 会修改原数组,返回反转过后的数组 [6,5,4,3,2,1]</span></span><br></pre></td></tr></table></figure>
+<br>
+<h2 id="2-数组遍历">2.数组遍历</h2>
+<ul>
+<li><strong>every()</strong> 用于检测数组所有元素是否都符合指定条件</li>
+<li><strong>filter()</strong> 创建一个新数组, 其包含通过所提供函数实现的测试的所有元素</li>
+<li><strong>forEach()</strong> 对数组的每个元素执行一次给定的函数</li>
+<li><strong>map()</strong> 创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值。</li>
+<li><strong>some()</strong> 用于检测数组中的元素是否满足指定条件</li>
+<li><strong>findIndex()</strong> 返回数组中满足条件的第一个元素的索引。若没有找到对应元素则返回-1。</li>
+</ul>
+<p>代码如下（every）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 是否全部大于0</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line"><span class="keyword">let</span> flag = arr.<span class="title function_">every</span>( <span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> item &gt; <span class="number">0</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(flag); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>代码如下（filter）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>];</span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">filter</span>( <span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 筛选符合条件的部分</span></span><br><span class="line">    <span class="keyword">if</span> (item % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">// 函数执行的结果为true, 则当前元素就是过滤出来的元素, 会返回成新数组</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;筛选出来的数组 =&gt;&quot;</span>, newArr); <span class="comment">// [2，4，6，8，10];</span></span><br></pre></td></tr></table></figure>
+<p>代码如下（forEach）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,];</span><br><span class="line">arr.<span class="title function_">forEach</span>( <span class="function">(<span class="params">item,index,array</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;数组的每一项 =&gt;&quot;</span>, item);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;数组的下标 =&gt;&quot;</span>, index);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;数组本身 =&gt;&quot;</span>, array);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>代码如下（map）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>];</span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">map</span>( <span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 把每一个元素 放大两倍, 然后返回成新的数组</span></span><br><span class="line">    e = e * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> e;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;新数组 =&gt;&quot;</span>, newArr); <span class="comment">//  [3, 5, 7, 9, 11, 13, 15, 17, 19, 21]</span></span><br></pre></td></tr></table></figure>
+<p>代码如下（some）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 是否全部大于0</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line"><span class="keyword">let</span> flag = arr.<span class="title function_">some</span>( <span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> item &gt; <span class="number">0</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(flag); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>代码如下（findIndex）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">5</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">130</span>, <span class="number">44</span>];</span><br><span class="line"><span class="keyword">let</span> index = arr.<span class="title function_">findIndex</span>( <span class="function"><span class="params">item</span> =&gt;</span> item == <span class="number">12</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(index);  <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<br>
+<h1>四、字符串API</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">charAt()</td>
+<td style="text-align:left">获取指定下标的字符</td>
+</tr>
+<tr>
+<td style="text-align:left">charCodeAt()</td>
+<td style="text-align:left">如果不传参数, 把第0个字符转unicode编码</td>
+</tr>
+<tr>
+<td style="text-align:left">String.fromCharCode()</td>
+<td style="text-align:left">静态方法,把unicode编码转成字符</td>
+</tr>
+<tr>
+<td style="text-align:left">substring()</td>
+<td style="text-align:left">裁切字符串,从开始下标裁切到结束下标,结束下标裁切不到</td>
+</tr>
+<tr>
+<td style="text-align:left">split()</td>
+<td style="text-align:left">把字符串切割成数组</td>
+</tr>
+<tr>
+<td style="text-align:left">repeat()</td>
+<td style="text-align:left">重复一个字符串n次</td>
+</tr>
+<tr>
+<td style="text-align:left">trim()</td>
+<td style="text-align:left">去除字符串左右两边的空格, 中间的空格则不做处理</td>
+</tr>
+<tr>
+<td style="text-align:left">toLowerCase()</td>
+<td style="text-align:left">把字符串转小写</td>
+</tr>
+<tr>
+<td style="text-align:left">toUpperCase()</td>
+<td style="text-align:left">把字符串转大写</td>
+</tr>
+<tr>
+<td style="text-align:left">replace()</td>
+<td style="text-align:left">替换</td>
+</tr>
+<tr>
+<td style="text-align:left">indexOf()</td>
+<td style="text-align:left">从头部开始检索下标</td>
+</tr>
+<tr>
+<td style="text-align:left">lastIndexOf()</td>
+<td style="text-align:left">从尾部开始检索下标</td>
+</tr>
+</tbody>
+</table>
+<p>代码如下（例子）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello wolrd&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">charAt</span>(<span class="number">0</span>);     <span class="comment">// 获取下标值 h</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">charCodeAt</span>(<span class="number">0</span>); <span class="comment">// 获取下标值并转换为unicode编码 104 </span></span><br><span class="line"><span class="keyword">var</span> newStr = <span class="title class_">String</span>.<span class="title function_">fromCharCode</span>(<span class="number">104</span>);  <span class="comment">// 把unicode编码转成字符 h</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">substring</span>(<span class="number">1</span>,<span class="number">4</span>);<span class="comment">// 从开始下标裁切到结束下标,结束下标裁切不到 ell</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">split</span>(<span class="string">&quot; &quot;</span>);    <span class="comment">// 把字符串切割成数组 [&quot;hello&quot;, &quot;wolrd&quot;]</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">repeat</span>(<span class="number">2</span>);     <span class="comment">// 重复字符串 hello wolrdhello wolrd</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">trim</span>();        <span class="comment">// 去除字符串左右两边的空格 hello wolrd</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">toLowerCase</span>(); <span class="comment">// 把字符串转小写 hello wolrd</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">toUpperCase</span>(); <span class="comment">// 把字符串转大写 HELLO WOLRD</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">replace</span>(<span class="string">&quot;h&quot;</span>,<span class="string">&quot;w&quot;</span>); <span class="comment">// 替换 wello Wolrd</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">indexOf</span>(<span class="string">&quot;h&quot;</span>);     <span class="comment">// 从头部开始检索下标 0</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">lastIndexOf</span>(<span class="string">&quot;l&quot;</span>); <span class="comment">// 从尾部开始检索下标 8</span></span><br></pre></td></tr></table></figure>
+<br>
+<h1>五、DOM对象</h1>
+ <br>
+<h2 id="1-元素节点">1.元素节点</h2>
+<blockquote>
+<p>文档本身是文档节点<br>
+所有 HTML 元素是元素节点<br>
+所有 HTML 属性是属性节点<br>
+HTML 元素内的文本是文本节点<br>
+注释是注释节点</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">parentNode</td>
+<td style="text-align:left">获取父节点,包括文本节点和注释节点</td>
+</tr>
+<tr>
+<td style="text-align:left">firstChild</td>
+<td style="text-align:left">获取第一个子节点</td>
+</tr>
+<tr>
+<td style="text-align:left">lastChild</td>
+<td style="text-align:left">获取最后一个子节点</td>
+</tr>
+<tr>
+<td style="text-align:left">nextSibling</td>
+<td style="text-align:left">获取下一个同胞节点</td>
+</tr>
+<tr>
+<td style="text-align:left">previousSibling</td>
+<td style="text-align:left">获取上一个同胞节点</td>
+</tr>
+<tr>
+<td style="text-align:left">parentElement</td>
+<td style="text-align:left">获取父元素版本节点，不包括文本节点和注释节点</td>
+</tr>
+<tr>
+<td style="text-align:left">firstElementChild</td>
+<td style="text-align:left">获取第一个子节点的元素版本</td>
+</tr>
+<tr>
+<td style="text-align:left">lastElementChild</td>
+<td style="text-align:left">获取最后一个子节点的元素版本</td>
+</tr>
+<tr>
+<td style="text-align:left">nextElementSibling</td>
+<td style="text-align:left">获取下一个同胞节点的元素版本</td>
+</tr>
+<tr>
+<td style="text-align:left">previousElementSibling</td>
+<td style="text-align:left">获取上一个同胞节点的元素版本</td>
+</tr>
+</tbody>
+</table>
+<p>代码如下（例子）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;text&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>这是第1个li<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>这是第2个li<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>这是第3个li<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>这是第4个li<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>这是第5个li<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>这是第6个li<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;p&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> ele = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;list&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;父节点=&gt;&quot;</span>,ele.<span class="property">parentNode</span>);          <span class="comment">// div#box</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;第一个子节点=&gt;&quot;</span>,ele.<span class="property">firstChild</span>);     <span class="comment">// #text</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;最后一个子节点=&gt;&quot;</span>,ele.<span class="property">lastChild</span>);    <span class="comment">// #text</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;上一个同胞节点=&gt;&quot;</span>,ele.<span class="property">previousSibling</span>);    <span class="comment">// #text</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;上一个同胞节点=&gt;&quot;</span>,ele.<span class="property">previousSibling</span>);    <span class="comment">// #text</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;父元素版本节点=&gt;&quot;</span>,ele.<span class="property">parentElement</span>);      <span class="comment">// div#box</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;第一个元素节点=&gt;&quot;</span>,ele.<span class="property">firstElementChild</span>);  <span class="comment">// li.item</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;最后一个元素节点=&gt;&quot;</span>,ele.<span class="property">lastElementChild</span>); <span class="comment">// li.item</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;上一个同胞元素节点=&gt;&quot;</span>,ele.<span class="property">previousElementSibling</span>);  <span class="comment">// p#text</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;下一个同胞元素节点=&gt;&quot;</span>,ele.<span class="property">nextElementSibling</span>);      <span class="comment">// div#p</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-获取或插入内容">2.获取或插入内容</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">innerHTML</td>
+<td style="text-align:left">获取元素内部的所有内容 (包括文本和元素)</td>
+</tr>
+<tr>
+<td style="text-align:left">innerText</td>
+<td style="text-align:left">获取元素内部的文本内容 (只获取文本不获取元素)</td>
+</tr>
+<tr>
+<td style="text-align:left">textContent</td>
+<td style="text-align:left">获取元素内部的文本内容 (只获取文本不获取元素)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-获取元素属性">3.获取元素属性</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">getAttributeNode()</td>
+<td style="text-align:left">获取元素属性节点</td>
+</tr>
+<tr>
+<td style="text-align:left">getAttribute()</td>
+<td style="text-align:left">获取元素属性的属性值</td>
+</tr>
+<tr>
+<td style="text-align:left">setAttribute()</td>
+<td style="text-align:left">设置元素属性的属性值</td>
+</tr>
+<tr>
+<td style="text-align:left">removeAttribute()</td>
+<td style="text-align:left">删除元素的属性</td>
+</tr>
+<tr>
+<td style="text-align:left">hasAttribute()</td>
+<td style="text-align:left">判断元素是否具有某个属性</td>
+</tr>
+</tbody>
+</table>
+<p>代码如下（例子）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="title function_">getAttributeNode</span>(<span class="string">&quot;id&quot;</span>));       <span class="comment">// div, typeof = &quot;Object&quot;</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="title function_">getAttribute</span>(<span class="string">&quot;id&quot;</span>));           <span class="comment">// div, typeof = &quot;string&quot;</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="title function_">setAttribute</span>(<span class="string">&quot;id&quot;</span>,<span class="string">&quot;dd&quot;</span>));      <span class="comment">// undefined, 修改id为dd </span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="title function_">removeAttribute</span>(<span class="string">&quot;id&quot;</span>));        <span class="comment">// undefined, 删除id</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(div.<span class="title function_">hasAttribute</span>(<span class="string">&quot;id&quot;</span>));           <span class="comment">// true</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-创建或插入节点">4.创建或插入节点</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">createTextNode()</td>
+<td style="text-align:left">创建文本节点</td>
+</tr>
+<tr>
+<td style="text-align:left">createElement()</td>
+<td style="text-align:left">创建元素节点</td>
+</tr>
+<tr>
+<td style="text-align:left">appendChild()</td>
+<td style="text-align:left">把节点插入到元素内部的结尾部分</td>
+</tr>
+<tr>
+<td style="text-align:left">nsertBefore()</td>
+<td style="text-align:left">把节点插入到元素内部的指定元素的前面</td>
+</tr>
+<tr>
+<td style="text-align:left">removeChild()</td>
+<td style="text-align:left">在节点中移除指定的子节点</td>
+</tr>
+<tr>
+<td style="text-align:left">remove()</td>
+<td style="text-align:left">移除本身</td>
+</tr>
+<tr>
+<td style="text-align:left">replaceChild()</td>
+<td style="text-align:left">用新的节点替换旧的节点</td>
+</tr>
+<tr>
+<td style="text-align:left">cloneNode()</td>
+<td style="text-align:left">克隆节点</td>
+</tr>
+<tr>
+<td style="text-align:left">crateDocumentFragment()</td>
+<td style="text-align:left">创建临时文档，虚拟DOM节点</td>
+</tr>
+</tbody>
+</table>
+<p>代码如下（例子）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> h1 = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;h1&quot;</span>);</span><br><span class="line">h1.<span class="property">textContent</span> = <span class="string">&quot;这是一个创建的标题标签&quot;</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(h1);</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">insertBefore</span>(h1);</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(h1);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> text = <span class="variable language_">document</span>.<span class="property">createTextNode</span>;</span><br><span class="line">text.<span class="property">textContent</span> = <span class="string">&quot;这是一个创建的文本&quot;</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(text);</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">insertBefore</span>(text);</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(text)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 传递一个可选的参数决定是否要拷贝子节点(默认: false不拷贝子节点) (true拷贝子节点) </span></span><br><span class="line"><span class="keyword">var</span> cloneNode = text.<span class="title function_">cloneNode</span>(<span class="literal">true</span>); </span><br></pre></td></tr></table></figure>
+<h2 id="5-其它">5.其它</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">element.nodeName</td>
+<td style="text-align:left">获取节点名字（大写)</td>
+</tr>
+<tr>
+<td style="text-align:left">element.calssName</td>
+<td style="text-align:left">设置或获取节点类名</td>
+</tr>
+<tr>
+<td style="text-align:left"><a target="_blank" rel="noopener" href="http://element.id">element.id</a></td>
+<td style="text-align:left">设置或获取节点id</td>
+</tr>
+<tr>
+<td style="text-align:left">element.style</td>
+<td style="text-align:left">设置或获取节点样式</td>
+</tr>
+<tr>
+<td style="text-align:left">element.dataset</td>
+<td style="text-align:left">设置自定义属性</td>
+</tr>
+<tr>
+<td style="text-align:left">element.classList.add()</td>
+<td style="text-align:left">添加类名</td>
+</tr>
+<tr>
+<td style="text-align:left">element.classList.toggle()</td>
+<td style="text-align:left">切换类名</td>
+</tr>
+<tr>
+<td style="text-align:left">element.classList.remove()</td>
+<td style="text-align:left">移除类名</td>
+</tr>
+<tr>
+<td style="text-align:left">element.classList.replace()</td>
+<td style="text-align:left">替换类名</td>
+</tr>
+<tr>
+<td style="text-align:left">element.offsetHeight</td>
+<td style="text-align:left">返回元素的高度</td>
+</tr>
+<tr>
+<td style="text-align:left">element.offsetTop</td>
+<td style="text-align:left">返回元素的垂直偏移位置</td>
+</tr>
+<tr>
+<td style="text-align:left">element.scrollTop</td>
+<td style="text-align:left">返回元素上边缘与视图之间的距离</td>
+</tr>
+<tr>
+<td style="text-align:left">element.clientHeight</td>
+<td style="text-align:left">返回元素的可见高度</td>
+</tr>
+<tr>
+<td style="text-align:left">element.offsetTop</td>
+<td style="text-align:left">返回元素的垂直偏移位置</td>
+</tr>
+</tbody>
+</table>
+<p>代码如下（例子）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box&quot;</span> <span class="attr">class</span>=<span class="string">&quot;div&quot;</span> <span class="attr">data-id</span>=<span class="string">&quot;1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(box.<span class="property">parentNode</span>);  <span class="comment">// DIV  </span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(box.<span class="property">calssName</span>);   <span class="comment">// div     </span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(box.<span class="property">id</span>);          <span class="comment">// box   </span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(box.<span class="property">dataset</span>.<span class="property">id</span>);  <span class="comment">// 1</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 设置类名(会把所有类名覆盖)</span></span></span><br><span class="line"><span class="language-javascript">    box.<span class="property">calssName</span> = <span class="string">&quot;newCalss&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 设置id(会把所有id覆盖)</span></span></span><br><span class="line"><span class="language-javascript">    box.<span class="property">id</span> = <span class="string">&quot;newId&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 设置样式</span></span></span><br><span class="line"><span class="language-javascript">    box.<span class="property">style</span>.<span class="property">background</span> = <span class="string">&quot;red&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 添加类名</span></span></span><br><span class="line"><span class="language-javascript">    box.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;add&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 切换类名,如果有该类名就移除该类名，如果没有就添加</span></span></span><br><span class="line"><span class="language-javascript">    box.<span class="property">classList</span>.<span class="title function_">toggle</span>(<span class="string">&quot;div&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 移除类名</span></span></span><br><span class="line"><span class="language-javascript">    box.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;div&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 替换类名</span></span></span><br><span class="line"><span class="language-javascript">    box.<span class="property">classList</span>.<span class="title function_">replace</span>(<span class="string">&quot;div&quot;</span>,<span class="string">&quot;newDiv&quot;</span>);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<br>
+<h1>六、事件对象</h1>
+<br>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/dom-obj-event.html">菜鸟详细地址</a></p>
+<br>
+<h1>七、BOM对象</h1>
+<blockquote>
+<p>所有浏览器都支持 window 对象。它表示浏览器窗口<br>
+所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员<br>
+全局变量是 window 对象的属性<br>
+全局函数是 window 对象的方法<br>
+甚至 HTML DOM 的 document 也是 window 对象的属性之一</p>
+</blockquote>
+<h2 id="1-Window-对象属性">1.Window 对象属性</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">closed</td>
+<td style="text-align:left">返回窗口是否已被关闭。</td>
+</tr>
+<tr>
+<td style="text-align:left">defaultStatus</td>
+<td style="text-align:left">设置或返回窗口状态栏中的默认文本。</td>
+</tr>
+<tr>
+<td style="text-align:left">document</td>
+<td style="text-align:left">对 Document 对象的只读引用。</td>
+</tr>
+<tr>
+<td style="text-align:left">frames</td>
+<td style="text-align:left">返回窗口中所有命名的框架。</td>
+</tr>
+<tr>
+<td style="text-align:left">history</td>
+<td style="text-align:left">对 History 对象的只读引用。请参数 History 对象。</td>
+</tr>
+<tr>
+<td style="text-align:left">innerHeight</td>
+<td style="text-align:left">返回窗口的文档显示区的高度。</td>
+</tr>
+<tr>
+<td style="text-align:left">innerWidth</td>
+<td style="text-align:left">返回窗口的文档显示区的宽度。</td>
+</tr>
+<tr>
+<td style="text-align:left">localStorage</td>
+<td style="text-align:left">在浏览器中存储 key/value 对。没有过期时间。</td>
+</tr>
+<tr>
+<td style="text-align:left">length</td>
+<td style="text-align:left">设置或返回窗口中的框架数量。</td>
+</tr>
+<tr>
+<td style="text-align:left">location</td>
+<td style="text-align:left">用于窗口或框架的 Location 对象。</td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">设置或返回窗口的名称。</td>
+</tr>
+<tr>
+<td style="text-align:left">navigator</td>
+<td style="text-align:left">对 Navigator 对象的只读引用。</td>
+</tr>
+<tr>
+<td style="text-align:left">opener</td>
+<td style="text-align:left">返回对创建此窗口的窗口的引用。</td>
+</tr>
+<tr>
+<td style="text-align:left">outerHeight</td>
+<td style="text-align:left">返回窗口的外部高度，包含工具条与滚动条。</td>
+</tr>
+<tr>
+<td style="text-align:left">outerWidth</td>
+<td style="text-align:left">返回窗口的外部宽度，包含工具条与滚动条。</td>
+</tr>
+<tr>
+<td style="text-align:left">pageXOffset</td>
+<td style="text-align:left">设置或返回当前页面相对于窗口显示区左上角的 X 位置。</td>
+</tr>
+<tr>
+<td style="text-align:left">pageYOffset</td>
+<td style="text-align:left">设置或返回当前页面相对于窗口显示区左上角的 Y 位置。</td>
+</tr>
+<tr>
+<td style="text-align:left">parent</td>
+<td style="text-align:left">返回父窗口。</td>
+</tr>
+<tr>
+<td style="text-align:left">screen</td>
+<td style="text-align:left">对 Screen 对象的只读引用。</td>
+</tr>
+<tr>
+<td style="text-align:left">screenLeft</td>
+<td style="text-align:left">返回相对于屏幕窗口的x坐标</td>
+</tr>
+<tr>
+<td style="text-align:left">screenTop</td>
+<td style="text-align:left">返回相对于屏幕窗口的y坐标</td>
+</tr>
+<tr>
+<td style="text-align:left">screenX</td>
+<td style="text-align:left">返回相对于屏幕窗口的x坐标</td>
+</tr>
+<tr>
+<td style="text-align:left">sessionStorage</td>
+<td style="text-align:left">在浏览器中存储 key/value 对。 在关闭窗口或标签页之后将会删除这些数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">screenY</td>
+<td style="text-align:left">返回相对于屏幕窗口的y坐标</td>
+</tr>
+<tr>
+<td style="text-align:left">self</td>
+<td style="text-align:left">返回对当前窗口的引用。等价于 Window 属性。</td>
+</tr>
+<tr>
+<td style="text-align:left">status</td>
+<td style="text-align:left">设置窗口状态栏的文本。</td>
+</tr>
+<tr>
+<td style="text-align:left">top</td>
+<td style="text-align:left">返回最顶层的父窗口。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-Window-对象方法">2.Window 对象方法</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">alert()</td>
+<td style="text-align:left">显示带有一段消息和一个确认按钮的警告框。</td>
+</tr>
+<tr>
+<td style="text-align:left">atob()</td>
+<td style="text-align:left">解码一个 base-64 编码的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:left">btoa()</td>
+<td style="text-align:left">创建一个 base-64 编码的字符串。</td>
+</tr>
+<tr>
+<td style="text-align:left">blur()</td>
+<td style="text-align:left">把键盘焦点从顶层窗口移开。</td>
+</tr>
+<tr>
+<td style="text-align:left">clearInterval()</td>
+<td style="text-align:left">取消由 setInterval() 设置的 timeout。</td>
+</tr>
+<tr>
+<td style="text-align:left">clearTimeout()</td>
+<td style="text-align:left">取消由 setTimeout() 方法设置的 timeout。</td>
+</tr>
+<tr>
+<td style="text-align:left">close()</td>
+<td style="text-align:left">关闭浏览器窗口。</td>
+</tr>
+<tr>
+<td style="text-align:left">confirm()</td>
+<td style="text-align:left">显示带有一段消息以及确认按钮和取消按钮的对话框。</td>
+</tr>
+<tr>
+<td style="text-align:left">createPopup()</td>
+<td style="text-align:left">创建一个 pop-up 窗口。</td>
+</tr>
+<tr>
+<td style="text-align:left">focus()</td>
+<td style="text-align:left">把键盘焦点给予一个窗口。</td>
+</tr>
+<tr>
+<td style="text-align:left">getSelection()</td>
+<td style="text-align:left">返回一个 Selection 对象，表示用户选择的文本范围或光标的当前位置。</td>
+</tr>
+<tr>
+<td style="text-align:left">getComputedStyle()</td>
+<td style="text-align:left">获取指定元素的 CSS 样式。</td>
+</tr>
+<tr>
+<td style="text-align:left">matchMedia()</td>
+<td style="text-align:left">该方法用来检查 media query 语句，它返回一个 MediaQueryList对象。</td>
+</tr>
+<tr>
+<td style="text-align:left">moveBy()</td>
+<td style="text-align:left">可相对窗口的当前坐标把它移动指定的像素。</td>
+</tr>
+<tr>
+<td style="text-align:left">moveTo()</td>
+<td style="text-align:left">把窗口的左上角移动到一个指定的坐标。</td>
+</tr>
+<tr>
+<td style="text-align:left">open()</td>
+<td style="text-align:left">打开一个新的浏览器窗口或查找一个已命名的窗口。</td>
+</tr>
+<tr>
+<td style="text-align:left">print()</td>
+<td style="text-align:left">打印当前窗口的内容。</td>
+</tr>
+<tr>
+<td style="text-align:left">prompt()</td>
+<td style="text-align:left">显示可提示用户输入的对话框。</td>
+</tr>
+<tr>
+<td style="text-align:left">resizeBy()</td>
+<td style="text-align:left">按照指定的像素调整窗口的大小。</td>
+</tr>
+<tr>
+<td style="text-align:left">resizeTo()</td>
+<td style="text-align:left">把窗口的大小调整到指定的宽度和高度。</td>
+</tr>
+<tr>
+<td style="text-align:left">scroll()</td>
+<td style="text-align:left">已废弃。 该方法已经使用了 scrollTo() 方法来替代。</td>
+</tr>
+<tr>
+<td style="text-align:left">scrollBy()</td>
+<td style="text-align:left">按照指定的像素值来滚动内容。</td>
+</tr>
+<tr>
+<td style="text-align:left">scrollTo()</td>
+<td style="text-align:left">把内容滚动到指定的坐标。</td>
+</tr>
+<tr>
+<td style="text-align:left">setInterval()</td>
+<td style="text-align:left">按照指定的周期（以毫秒计）来调用函数或计算表达式。</td>
+</tr>
+<tr>
+<td style="text-align:left">setTimeout()</td>
+<td style="text-align:left">在指定的毫秒数后调用函数或计算表达式。</td>
+</tr>
+<tr>
+<td style="text-align:left">stop()</td>
+<td style="text-align:left">停止页面载入。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-Navigator-对象">3.Navigator 对象</h2>
+<p>Navigator 对象包含有关浏览器的信息。如：获取浏览器名称、版本信息、操作系统平台信息等等。<br>
+调用方式：window.navigator 或者 navigator。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">appCodeName</td>
+<td style="text-align:left">返回浏览器的代码名</td>
+</tr>
+<tr>
+<td style="text-align:left">appName</td>
+<td style="text-align:left">返回浏览器的名称</td>
+</tr>
+<tr>
+<td style="text-align:left">appVersion</td>
+<td style="text-align:left">返回浏览器的平台和版本信息</td>
+</tr>
+<tr>
+<td style="text-align:left">cookieEnabled</td>
+<td style="text-align:left">返回指明浏览器中是否启用 cookie 的布尔值</td>
+</tr>
+<tr>
+<td style="text-align:left">platform</td>
+<td style="text-align:left">返回运行浏览器的操作系统平台</td>
+</tr>
+<tr>
+<td style="text-align:left">userAgent</td>
+<td style="text-align:left">返回由客户机发送服务器的user-agent 头部的值</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-Screen-对象">4.Screen 对象</h2>
+<p>Screen 对象包含有关客户端显示屏幕的信息。如：获取屏幕高度、宽度等等。<br>
+调用方式：window.screen 或者 screen。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">availHeight</td>
+<td style="text-align:left">返回屏幕的高度（不包括Windows任务栏）</td>
+</tr>
+<tr>
+<td style="text-align:left">availWidth</td>
+<td style="text-align:left">返回屏幕的宽度（不包括Windows任务栏）</td>
+</tr>
+<tr>
+<td style="text-align:left">colorDepth</td>
+<td style="text-align:left">返回目标设备或缓冲器上的调色板的比特深度</td>
+</tr>
+<tr>
+<td style="text-align:left">height</td>
+<td style="text-align:left">返回屏幕的总高度</td>
+</tr>
+<tr>
+<td style="text-align:left">pixelDepth</td>
+<td style="text-align:left">返回屏幕的颜色分辨率（每象素的位数）</td>
+</tr>
+<tr>
+<td style="text-align:left">width</td>
+<td style="text-align:left">返回屏幕的总宽度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-History-对象">5.History 对象</h2>
+<p>history 对象包含用户（在浏览器窗口中）访问过的 URL。可对当前页的浏览历史进行操作，如：前进、后退等。但不能知道浏览了哪些URL。<br>
+调用方式：window.history 或者 history。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性或方法</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">length</td>
+<td style="text-align:left">返回历史列表中的网址数</td>
+</tr>
+<tr>
+<td style="text-align:left">back()</td>
+<td style="text-align:left">加载 history 列表中的前一个 URL</td>
+</tr>
+<tr>
+<td style="text-align:left">forward()</td>
+<td style="text-align:left">加载 history 列表中的下一个 URL</td>
+</tr>
+<tr>
+<td style="text-align:left">go()</td>
+<td style="text-align:left">加载 history 列表中的某个具体页面</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-Location-对象">6.Location 对象</h2>
+<p>Location 对象包含有关当前 URL 的信息。 Location 对象是 window 对象的一部分，可通过 window.Location 属性对其进行访问。，如：导航到新的页面、获取URL信息等。<br>
+调用方式：window.location 或者 location。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性或方法</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">hash</td>
+<td style="text-align:left">返回一个URL的锚部分</td>
+</tr>
+<tr>
+<td style="text-align:left">host</td>
+<td style="text-align:left">返回一个URL的主机名和端口</td>
+</tr>
+<tr>
+<td style="text-align:left">hostname</td>
+<td style="text-align:left">返回URL的主机名</td>
+</tr>
+<tr>
+<td style="text-align:left">href</td>
+<td style="text-align:left">返回完整的URL</td>
+</tr>
+<tr>
+<td style="text-align:left">pathname</td>
+<td style="text-align:left">返回的URL路径名。</td>
+</tr>
+<tr>
+<td style="text-align:left">port</td>
+<td style="text-align:left">返回一个URL服务器使用的端口号</td>
+</tr>
+<tr>
+<td style="text-align:left">protocol</td>
+<td style="text-align:left">返回一个URL协议</td>
+</tr>
+<tr>
+<td style="text-align:left">search</td>
+<td style="text-align:left">返回一个URL的查询部分</td>
+</tr>
+<tr>
+<td style="text-align:left">assign()</td>
+<td style="text-align:left">载入一个新的文档</td>
+</tr>
+<tr>
+<td style="text-align:left">reload()</td>
+<td style="text-align:left">重新载入当前文档</td>
+</tr>
+<tr>
+<td style="text-align:left">replace()</td>
+<td style="text-align:left">用新的文档替换当前文档</td>
+</tr>
+</tbody>
+</table>
+<p>代码如下（例子）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在当前页面 打开网址</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">open</span>(<span class="string">&quot;https://www.baidu.com&quot;</span>,<span class="string">&quot;名称&quot;</span>, <span class="string">&quot;_self&quot;</span>); </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 跳转到页面中的指定坐标</span></span><br><span class="line"><span class="comment">// smooth (平滑滚动)，</span></span><br><span class="line"><span class="comment">// nstant (瞬间滚动)，默认值 auto，效果等同于 instant</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">scroll</span>(&#123;</span><br><span class="line">    <span class="attr">top</span>: <span class="number">2000</span>,</span><br><span class="line">    <span class="attr">left</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">behavior</span>: <span class="string">&#x27;smooth&#x27;</span>  </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面跳转, 可以返回上一个页面栈</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&quot;https://www.baidu.com&quot;</span>;  </span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="title function_">assign</span>(<span class="string">&quot;https://www.baidu.com&quot;</span>); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 直接替换页面, 无法返回上一个页面栈</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="title function_">replace</span>(<span class="string">&quot;https://www.baidu.com&quot;</span>); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 重新加载当前页面(刷新当前页面)</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="title function_">reload</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在history中向后跳转</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">back</span>();</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">go</span>(-<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向前跳转</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">forward</span>();</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">go</span>(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当前页</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">go</span>(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<br>
+<h1>八、正则表达式</h1>
+<br>
+<h2 id="1-修饰符">1.修饰符</h2>
+<ul>
+<li><strong>i</strong> 忽略大写小写匹配</li>
+<li><strong>g</strong>  全局匹配</li>
+<li><strong>m</strong> 多行匹配</li>
+</ul>
+<h2 id="2-正则方法">2.正则方法</h2>
+<p>代码如下（ 正则表达式.方法名(字符串) ）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;test&quot;</span>;</span><br><span class="line"><span class="comment">// 正则表达式</span></span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/test/i</span>;</span><br><span class="line"><span class="comment">// 判断是否符合匹配</span></span><br><span class="line">reg.<span class="title function_">test</span>(str);	<span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">test()</td>
+<td>验证字符串是否符合正则   返回true 或 false</td>
+</tr>
+<tr>
+<td style="text-align:left">exec()</td>
+<td>验证字符串是否符合正则   返回数组 或 null</td>
+</tr>
+<tr>
+<td style="text-align:left">complie()</td>
+<td>重写正则表达式规则</td>
+</tr>
+<tr>
+<td style="text-align:left">lastIndex ()</td>
+<td>可读可写，表示下一次匹配从哪个下标开始（全局匹配）</td>
+</tr>
+<tr>
+<td style="text-align:left">source()</td>
+<td>可读,返回正则表达式的字符串形式（不包括反斜杠）</td>
+</tr>
+</tbody>
+</table>
+<p>常见字符串搭配正则使用：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>match()</td>
+<td>返回数组（全局匹配下拿到所有）</td>
+</tr>
+<tr>
+<td>search()</td>
+<td>查找</td>
+</tr>
+<tr>
+<td>replace()</td>
+<td>替换</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-正则表达式模式">3.正则表达式模式</h2>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[]</td>
+<td>字符集, 括号里面的每一个字符 都可以匹配到</td>
+</tr>
+<tr>
+<td>[^]</td>
+<td>脱字符: 如果方括号内的第一个字符是[^]，则表示除了字符集之中的字符，或  以…开头</td>
+</tr>
+<tr>
+<td>-</td>
+<td>连字符， 用来提供简写形式，表示字符的连续范围。比如，[abc]可以写成[a-c]</td>
+</tr>
+<tr>
+<td>.</td>
+<td>除回车（\r）、换行(\n) 、行分隔符（\u2028）和段分隔符（\u2029）以外, 可以匹配所有字符</td>
+</tr>
+<tr>
+<td>\</td>
+<td>转义符：^、.、[、$、(、)、|、*、+、?、{ 、\\ 在它们前面要加上反斜杠</td>
+</tr>
+<tr>
+<td>$</td>
+<td>以…结尾</td>
+</tr>
+<tr>
+<td>|</td>
+<td>在正则表达式中表示“或关系”（OR），即cat|dog表示匹配cat或dog</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>匹配换行键</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>匹配回车键</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>匹配制表符 tab（U+0009）</td>
+</tr>
+<tr>
+<td>\0</td>
+<td>匹配null字符（U+0000</td>
+</tr>
+<tr>
+<td>\xhh</td>
+<td>匹配一个以两位十六进制数（\x00-\xFF）表示的字符</td>
+</tr>
+<tr>
+<td>\uhhhh</td>
+<td>匹配一个以四位十六进制数（\u0000-\uFFFF）表示的 Unicode 字符</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-重复类">4.重复类</h2>
+<p>介绍：模式的精确匹配次数，使用大括号{}表示。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{n}</td>
+<td>表示恰好重复n次，</td>
+</tr>
+<tr>
+<td>{min,}</td>
+<td>表示至少重复min次，</td>
+</tr>
+<tr>
+<td>{min,max}</td>
+<td>表示重复最少min次, 最多max次</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-量词符">5.量词符</h2>
+<p>介绍：量词符用来设定某个模式出现的次数。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?</td>
+<td>问号表示某个模式出现0次或1次，等同于{0, 1}。</td>
+</tr>
+<tr>
+<td>*</td>
+<td>星号表示某个模式出现 任意次（0次或多次），等同于{0,}。</td>
+</tr>
+<tr>
+<td>+</td>
+<td>加号表示某个模式出现1次或多次，等同于{1,}。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-先行断言">6.先行断言</h2>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?=n</td>
+<td>先行断言 某种规则后面紧跟着字符n, 才可以被匹配到</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-先行否定断言">7.先行否定断言</h2>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?!n</td>
+<td>先行否定断言 某种规则后面不跟着字符n, 才可以被匹配到</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h1>九、其它</h1>
+<br>
+<h2 id="1-this绑定">1.this绑定</h2>
+<ul>
+<li><strong>call()</strong></li>
+<li><strong>apply()</strong></li>
+<li><strong>bind()</strong></li>
+</ul>
+<p>代码如下:（例子）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">_this</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>+<span class="string">&quot;=&gt;姓名：&quot;</span>+<span class="variable language_">this</span>.<span class="property">name</span>+<span class="string">&quot;,年龄:&quot;</span>+<span class="variable language_">this</span>.<span class="property">age</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">	<span class="attr">name</span>:<span class="string">&quot;张三&quot;</span>,</span><br><span class="line">	<span class="attr">age</span>:<span class="number">18</span>,</span><br><span class="line">	<span class="attr">fn</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="title function_">_this</span>();   			<span class="comment">// [object Window]=&gt;姓名：,年龄:undefined</span></span><br><span class="line">		_this.<span class="title function_">call</span>(<span class="variable language_">this</span>);   <span class="comment">// [object Object]=&gt;姓名：李四,年龄:18</span></span><br><span class="line">		_this.<span class="title function_">apply</span>(<span class="variable language_">this</span>);  <span class="comment">// [object Object]=&gt;姓名：李四,年龄:18</span></span><br><span class="line">		_this.<span class="title function_">bind</span>(<span class="variable language_">this</span>)(); <span class="comment">// [object Object]=&gt;姓名：李四,年龄:18</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">			</span><br><span class="line">obj.<span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+<br>
+<h2 id="2-constructor">2.constructor</h2>
+<p>构造函数: <strong>Object</strong> <strong>Array</strong> <strong>String</strong> <strong>Number</strong> <strong>Date</strong> <strong>Boolean</strong>  …（<strong>Math</strong> 例外,它不是构造器)。所有对象都会从它的原型上继承一个 constructor 属性：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line">o.<span class="property">constructor</span> === <span class="title class_">Object</span>; <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="title class_">Object</span>;</span><br><span class="line">o.<span class="property">constructor</span> === <span class="title class_">Object</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<br>
+<h2 id="3-instanceof">3. instanceof</h2>
+<p>instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Car</span>(<span class="params">make</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">make</span> = make;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> auto = <span class="keyword">new</span> <span class="title class_">Car</span>(<span class="string">&#x27;Honda&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(auto <span class="keyword">instanceof</span> <span class="title class_">Car</span>);  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<br>
+<h2 id="4-继承">4.继承</h2>
+<p>代码如下:（拷贝继承）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Animal</span>(<span class="params"></span>)&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Animal</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">species</span> = <span class="string">&quot;动物&quot;</span>;</span><br><span class="line">		</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Cat</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&quot;大猫&quot;</span>;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">color</span> = <span class="string">&quot;黄色&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 继承的方法</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">extend</span>(<span class="params">Child, Parent</span>)&#123;</span><br><span class="line">      <span class="keyword">var</span> p = <span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>;</span><br><span class="line">      <span class="keyword">var</span> c = <span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span>;</span><br><span class="line">      <span class="comment">// 把父元素的原型里面的每一个属性 赋值给 子元素的原型</span></span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> p)&#123;</span><br><span class="line">           c[i] = p[i];</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line">		</span><br><span class="line"> <span class="comment">// 继承</span></span><br><span class="line"><span class="title function_">extend</span>(<span class="title class_">Cat</span>, <span class="title class_">Animal</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实现了拷贝的效果</span></span><br><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(cat1.<span class="property">species</span>);   <span class="comment">// 动物</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Cat</span>.<span class="property"><span class="keyword">prototype</span></span>);  <span class="comment">// Object...</span></span><br></pre></td></tr></table></figure>
+<br>
+<h2 id="5-字符串-String-与json的相互转换">5.字符串(String)与json的相互转换</h2>
+<br>
+<h3 id="1-字符串转json">1.字符串转json</h3>
+<ul>
+<li><strong>parse()</strong></li>
+<li><strong>eval()</strong></li>
+</ul>
+<p>代码如下:（例子）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`&#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:18&#125;`</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>( <span class="built_in">eval</span>(<span class="string">&#x27;(&#x27;</span>+str+<span class="string">&#x27;)&#x27;</span>)); <span class="comment">// 不安全，eval会执行json串中的表达式 </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>( <span class="title class_">JSON</span>.<span class="title function_">parse</span>(str));   <span class="comment">// key名称(例如name)全部必须有双引号</span></span><br></pre></td></tr></table></figure>
+<br>
+<h3 id="2-json转字符串">2.json转字符串</h3>
+<ul>
+<li><strong>stringify()</strong></li>
+</ul>
+<p>代码如下:（例子）</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">	<span class="string">&quot;name&quot;</span>:<span class="string">&quot;张三&quot;</span>,</span><br><span class="line">	<span class="string">&quot;age&quot;</span>:<span class="number">18</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> str = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(obj); <span class="comment">// &#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:18&#125;</span></span><br><span class="line">			</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> str); <span class="comment">// String</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="property">constructor</span> == <span class="title class_">String</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<br>
+<h3 id="6-其它">6.其它</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">isNaN()</td>
+<td style="text-align:left">查看其它类型是不是非数字</td>
+</tr>
+<tr>
+<td style="text-align:left">toFixed()</td>
+<td style="text-align:left">保留小数</td>
+</tr>
+<tr>
+<td style="text-align:left">isInteger()</td>
+<td style="text-align:left">判断是否为整数</td>
+</tr>
+<tr>
+<td style="text-align:left">Math.min()</td>
+<td style="text-align:left">取最小值</td>
+</tr>
+<tr>
+<td style="text-align:left">Math.max()</td>
+<td style="text-align:left">取最大值</td>
+</tr>
+<tr>
+<td style="text-align:left">preventDefault()</td>
+<td style="text-align:left">通知浏览器不要执行与事件相关联的默认动作</td>
+</tr>
+<tr>
+<td style="text-align:left">stopPropagation()</td>
+<td style="text-align:left">取消事件进一步捕获或者冒泡</td>
+</tr>
+</tbody>
+</table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://xie392.gitee.io">xie392</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xie392.gitee.io/JavaScript/JavaScript-%E6%B1%87%E6%80%BB/">https://xie392.gitee.io/JavaScript/JavaScript-%E6%B1%87%E6%80%BB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xie392.gitee.io" target="_blank">xie392</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JavaScript/">JavaScript</a></div><div class="post_share"></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "/images/loading.gif" data-lazy-src="/images/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/images/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "/images/loading.gif" data-lazy-src="/images/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/wechat/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8map%E7%BB%84%E4%BB%B6/" title="小程序简单使用map组件"><img class="cover" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="onerror=null;src='/images/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">小程序简单使用map组件</div></div></a></div><div class="next-post pull-right"><a href="/CSS/aspect-ratio%E5%B1%9E%E6%80%A7/" title="div根据屏幕缩放进行比例缩放"><img class="cover" src= "/images/loading.gif" data-lazy-src="/images/cover_08.jpg" onerror="onerror=null;src='/images/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">div根据屏幕缩放进行比例缩放</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/JavaScript/Echarts%E7%94%A8%E6%B3%95/" title="Echarts使用心得"><img class="cover" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-14</div><div class="title">Echarts使用心得</div></div></a></div><div><a href="/JavaScript/JavaScript-DOM/" title="js笔记-DOM对象"><img class="cover" src= "/images/loading.gif" data-lazy-src="/images/cover_06.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-14</div><div class="title">js笔记-DOM对象</div></div></a></div><div><a href="/JavaScript/JavaScript-%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="js笔记-数组和字符串API"><img class="cover" src= "/images/loading.gif" data-lazy-src="/images/cover_04.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-14</div><div class="title">js笔记-数组和字符串API</div></div></a></div><div><a href="/JavaScript/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A4%8D%E5%88%B6%E5%85%BC%E5%AE%B9%E5%86%99%E6%B3%95/" title="js复制兼容写法封装"><img class="cover" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-14</div><div class="title">js复制兼容写法封装</div></div></a></div><div><a href="/JavaScript/%E7%BD%91%E9%A1%B5%E6%92%AD%E6%94%BErtsp%E8%A7%86%E9%A2%91%E6%B5%81/" title="网页播放rtsp视频流"><img class="cover" src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-17</div><div class="title">网页播放rtsp视频流</div></div></a></div><div><a href="/CSS/aspect-ratio%E5%B1%9E%E6%80%A7/" title="div根据屏幕缩放进行比例缩放"><img class="cover" src= "/images/loading.gif" data-lazy-src="/images/cover_08.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-14</div><div class="title">div根据屏幕缩放进行比例缩放</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/images/loading.gif" data-lazy-src="/images/logo.png" onerror="this.onerror=null;this.src='/images/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xie392</div><div class="author-info__description">xie392</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/xie392"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xie392" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">一个个人笔记博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">一、Date（日期） 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-get%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">1. get方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-to%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">2. to方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-set%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">3.set方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">二、Math &#x2F; 随机生成</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">三、数组API</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%95%B0%E7%BB%84API"><span class="toc-number">3.1.</span> <span class="toc-text">1.数组API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%95%B0%E7%BB%84%E9%81%8D%E5%8E%86"><span class="toc-number">3.2.</span> <span class="toc-text">2.数组遍历</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">四、字符串API</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">五、DOM对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%85%83%E7%B4%A0%E8%8A%82%E7%82%B9"><span class="toc-number">5.1.</span> <span class="toc-text">1.元素节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%8E%B7%E5%8F%96%E6%88%96%E6%8F%92%E5%85%A5%E5%86%85%E5%AE%B9"><span class="toc-number">5.2.</span> <span class="toc-text">2.获取或插入内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="toc-number">5.3.</span> <span class="toc-text">3.获取元素属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%9B%E5%BB%BA%E6%88%96%E6%8F%92%E5%85%A5%E8%8A%82%E7%82%B9"><span class="toc-number">5.4.</span> <span class="toc-text">4.创建或插入节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%85%B6%E5%AE%83"><span class="toc-number">5.5.</span> <span class="toc-text">5.其它</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">六、事件对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">七、BOM对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Window-%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="toc-number">7.1.</span> <span class="toc-text">1.Window 对象属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Window-%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">7.2.</span> <span class="toc-text">2.Window 对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Navigator-%E5%AF%B9%E8%B1%A1"><span class="toc-number">7.3.</span> <span class="toc-text">3.Navigator 对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Screen-%E5%AF%B9%E8%B1%A1"><span class="toc-number">7.4.</span> <span class="toc-text">4.Screen 对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-History-%E5%AF%B9%E8%B1%A1"><span class="toc-number">7.5.</span> <span class="toc-text">5.History 对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Location-%E5%AF%B9%E8%B1%A1"><span class="toc-number">7.6.</span> <span class="toc-text">6.Location 对象</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">八、正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">8.1.</span> <span class="toc-text">1.修饰符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%AD%A3%E5%88%99%E6%96%B9%E6%B3%95"><span class="toc-number">8.2.</span> <span class="toc-text">2.正则方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%A8%A1%E5%BC%8F"><span class="toc-number">8.3.</span> <span class="toc-text">3.正则表达式模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%87%8D%E5%A4%8D%E7%B1%BB"><span class="toc-number">8.4.</span> <span class="toc-text">4.重复类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%87%8F%E8%AF%8D%E7%AC%A6"><span class="toc-number">8.5.</span> <span class="toc-text">5.量词符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%85%88%E8%A1%8C%E6%96%AD%E8%A8%80"><span class="toc-number">8.6.</span> <span class="toc-text">6.先行断言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%85%88%E8%A1%8C%E5%90%A6%E5%AE%9A%E6%96%AD%E8%A8%80"><span class="toc-number">8.7.</span> <span class="toc-text">7.先行否定断言</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">九、其它</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-this%E7%BB%91%E5%AE%9A"><span class="toc-number">9.1.</span> <span class="toc-text">1.this绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-constructor"><span class="toc-number">9.2.</span> <span class="toc-text">2.constructor</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-instanceof"><span class="toc-number">9.3.</span> <span class="toc-text">3. instanceof</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%BB%A7%E6%89%BF"><span class="toc-number">9.4.</span> <span class="toc-text">4.继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%AD%97%E7%AC%A6%E4%B8%B2-String-%E4%B8%8Ejson%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="toc-number">9.5.</span> <span class="toc-text">5.字符串(String)与json的相互转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%ACjson"><span class="toc-number">9.5.1.</span> <span class="toc-text">1.字符串转json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-json%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">9.5.2.</span> <span class="toc-text">2.json转字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%85%B6%E5%AE%83"><span class="toc-number">9.5.3.</span> <span class="toc-text">6.其它</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/hello-world/" title="Hello World"><img src= "/images/loading.gif" data-lazy-src="/images/cover_03.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/hello-world/" title="Hello World">Hello World</a><time datetime="2023-04-17T12:27:19.000Z" title="发表于 2023-04-17 20:27:19">2023-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Web/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E4%B8%BA%E4%BA%86%E5%A5%B3%E7%A5%9E%E5%B0%8F%E8%8A%B3%EF%BC%81SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86-%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83/" title="封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练"><img src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练"/></a><div class="content"><a class="title" href="/Web/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E4%B8%BA%E4%BA%86%E5%A5%B3%E7%A5%9E%E5%B0%8F%E8%8A%B3%EF%BC%81SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86-%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83/" title="封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练">封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练</a><time datetime="2023-04-17T03:35:00.000Z" title="发表于 2023-04-17 11:35:00">2023-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/JavaScript/%E7%BD%91%E9%A1%B5%E6%92%AD%E6%94%BErtsp%E8%A7%86%E9%A2%91%E6%B5%81/" title="网页播放rtsp视频流"><img src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="网页播放rtsp视频流"/></a><div class="content"><a class="title" href="/JavaScript/%E7%BD%91%E9%A1%B5%E6%92%AD%E6%94%BErtsp%E8%A7%86%E9%A2%91%E6%B5%81/" title="网页播放rtsp视频流">网页播放rtsp视频流</a><time datetime="2023-04-17T01:36:44.000Z" title="发表于 2023-04-17 09:36:44">2023-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Python/Python%E7%88%AC%E8%99%AB/" title="Python爬虫"><img src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Python爬虫"/></a><div class="content"><a class="title" href="/Python/Python%E7%88%AC%E8%99%AB/" title="Python爬虫">Python爬虫</a><time datetime="2023-04-16T03:36:44.000Z" title="发表于 2023-04-16 11:36:44">2023-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Vue/vue3%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" title="vue3自定义指令"><img src= "/images/loading.gif" data-lazy-src="/images/cover_09.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="vue3自定义指令"/></a><div class="content"><a class="title" href="/Vue/vue3%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" title="vue3自定义指令">vue3自定义指令</a><time datetime="2023-04-16T03:36:44.000Z" title="发表于 2023-04-16 11:36:44">2023-04-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/images/cover_03.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By xie392</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">学习永无止境，不要被一点点小小的问题所止步于此</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
