@@ -2280,7 +2280,7 @@ MODIFY NAME | FILE = &lt;数据库名称/文件名&gt;</p>
   </entry>
   <entry>
     <title>js生成目录并实现目录节点跟随滚动高亮</title>
-    <url>/JavaScript/js-%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%9B%AE%E5%BD%95%E8%8A%82%E7%82%B9%E8%B7%9F%E9%9A%8F%E6%BB%9A%E5%8A%A8%E9%AB%98%E4%BA%AE/</url>
+    <url>/JavaScript/toc/</url>
     <content><![CDATA[<h1>项目场景：</h1>
 <p>当网页有文章，文章中有很多标题。我们有时会需要生成目录大纲，以便他人查阅。生成目录到是不难，但是怎么实现目录跟随着页面滚动而改变目录的高亮标题？</p>
 <hr>
