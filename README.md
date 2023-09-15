@@ -27,7 +27,7 @@
 
 
 <!-- About me 关于我 -->
-### 🤺 About Me
+## 关于我 🤺 
 一名热爱开发的前端发烧友！热衷于有关于前端的知识以及新发展的技术！希望将来能成为一名出色的前端开程序员！
   <br />
 <!-- 
@@ -74,7 +74,9 @@
 🧰 常用的工具
 
 <!-- programming tool icon 编程工具图标 -->
+<!--
 <img src="https://skillicons.dev/icons?i=html,css,js,vue,react,ts,idea,git,py,github,linux,mysql" /><br>
+-->
 </div>
 
 ## 今年汇总 ✨
