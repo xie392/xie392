@@ -1,5 +1,5 @@
 ## 关于我 🤺 
-一个无名小卒，喜欢胡乱搞点小玩意。在未来的某一天，希望成为一个自由职业者，开发自己想开发的程序！你是我的第 ![Visitor Count](https://profile-counter.glitch.me/xie392/count.svg) 个访客！
+一个无名小卒，喜欢胡乱搞点小玩意。在未来的某一天，希望成为一个自由职业者，开发自己想开发的程序！
 
 <img align="right" top='60' alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="480"/>
 
@@ -43,6 +43,21 @@
 ![Redis Badge](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=fff&style=flat)
 
 ## 今年汇总 ✨
+
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/platane/xie392/output/github-contribution-grid-snake-dark.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/platane/xie392/output/github-contribution-grid-snake.svg"
+  />
+  <img
+    alt="github contribution grid snake animation"
+    src="https://raw.githubusercontent.com/platane/xie392/output/github-contribution-grid-snake.svg"
+  />
+</picture>
 
 <img align="" height="137px" src="https://github-readme-stats.vercel.app/api?username=xie392&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&line_height=21&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite&locale=cn" /><img align="" height="137px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=xie392&hide_title=true&hide_border=true&layout=compact&bg_color=0,73FA79,73FDFF,D783FF&theme=graywhite&locale=cn" />
 
