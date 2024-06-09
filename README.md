@@ -1,6 +1,29 @@
 ## 关于我 🤺 
 一个无名小卒，喜欢胡乱搞点小玩意。在未来的某一天，希望成为一个自由职业者，开发自己想开发的程序！
 
+### Hi there 👋
+<img align="right" top='60' alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="480"/>
+
+
+### I'm Yang hc （Bill） .
+
+<br/>
+
+- 🍒  Passionate about software development with a decade of professional experience.
+- 📍  Based in Chongqing (CQ), China.
+- 👨‍🎓  CQU.
+- 👩‍💻  10 years in the software development industry.
+- 🎖️  Served 5 years in the army, honing discipline and leadership skills.
+- 👨‍🦳  Father of two girls.
+- 📧  [hqwlkj@sina.com](mailto:hqwlkj@sina.com).
+<br/>
+<br/>
+
+你是第 ![Visitor Count](https://profile-counter.glitch.me/hqwlkj/count.svg) 个访客！
+
+<br/>
+<br/>
+
 ## 正在学习 💪
 
 ![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat)
