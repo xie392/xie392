@@ -4,17 +4,14 @@
 ## 关于我 🤺  👋
 <img align="right" top='60' alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="480"/>
 
-
-### I'm Yang hc （Bill） .
-
-<br/>
-
 一个无名小卒，喜欢胡乱搞点小玩意。在未来的某一天，希望成为一个自由职业者，开发自己想开发的程序！
 
 <br/>
 <br/>
+<br/>
 
-你是第 ![Visitor Count](https://profile-counter.glitch.me/hqwlkj/count.svg) 个访客！
+
+你是第 ![Visitor Count](https://profile-counter.glitch.me/xie392/count.svg) 个访客！
 
 <br/>
 <br/>
