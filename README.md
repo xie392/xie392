@@ -34,16 +34,11 @@
 ![Web Components Badge](https://img.shields.io/badge/Web%20Components-29ABE2?logo=webcomponentsdotorg&logoColor=fff&style=flat)
 ![Capacitor Badge](https://img.shields.io/badge/Capacitor-119EFF?logo=capacitor&logoColor=fff&style=flat)
 ![Electron Badge](https://img.shields.io/badge/Electron-47848F?logo=electron&logoColor=fff&style=flat)
-  
-## 计划学习 🧠 
-
 ![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=flat)
-![Electron Badge](https://img.shields.io/badge/Electron-47848F?logo=electron&logoColor=fff&style=flat)
 ![C Badge](https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=fff&style=flat)
 ![C++ Badge](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=flat)
 ![Spring Badge](https://img.shields.io/badge/Spring-6DB33F?logo=spring&logoColor=fff&style=flat)
 ![Django Badge](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=fff&style=flat)
-![Go Badge](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=fff&style=flat)
 ![MongoDB Badge](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat)
 ![Redis Badge](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=fff&style=flat)
 
