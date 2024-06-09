@@ -1,9 +1,7 @@
 ## 关于我 🤺 
-一个无名小卒，喜欢胡乱搞点小玩意。在未来的某一天，希望成为一个自由职业者，开发自己想开发的程序！
+一个无名小卒，喜欢胡乱搞点小玩意。在未来的某一天，希望成为一个自由职业者，开发自己想开发的程序！你是我的第 ![Visitor Count](https://profile-counter.glitch.me/xie392/count.svg) 个访客！
 
 <img align="right" top='60' alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="480"/>
-
-你是第 ![Visitor Count](https://profile-counter.glitch.me/xie392/count.svg) 个访客！
 
 ## 正在学习 💪
 
@@ -22,7 +20,16 @@
 ![Linux Badge](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=000&style=flat)
 ![Git Badge](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=flat)
 ![Nginx Badge](https://img.shields.io/badge/Nginx-009639?logo=nginx&logoColor=fff&style=flat)
-
+![Go Badge](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=fff&style=flat)
+![Rust Badge](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=fff&style=flat)
+![Redis Badge](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=fff&style=flat)
+![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=flat)
+![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
+![Webpack Badge](https://img.shields.io/badge/Webpack-8DD6F9?logo=webpack&logoColor=000&style=flat)
+![Babel Badge](https://img.shields.io/badge/Babel-F9DC3E?logo=babel&logoColor=000&style=flat)
+![ESLint Badge](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=fff&style=flat)
+![Prettier Badge](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=000&style=flat)
+![GitHub Actions Badge](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=fff&style=flat)
   
 ## 计划学习 🧠 
 
